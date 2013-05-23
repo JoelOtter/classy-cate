@@ -9,5 +9,23 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require shared
  */
+html, body {
+  height : 100%;
+}
+
+#wrapper {
+  min-height : 100%;
+}
+
+#page-content {
+  overflow : auto;
+  padding-bottom : 300px;
+}
+
+.footer {
+  position : relative;
+  margin-top : -128px !important;
+  clear : both;
+}

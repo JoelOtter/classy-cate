@@ -15,9 +15,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: classy-cate_development
+  database: classycate_development
   pool: 5
-  username: classy-cate
+  username: classycate
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -41,15 +41,15 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: classy-cate_test
+  database: classycate_test
   pool: 5
-  username: classy-cate
+  username: classycate
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: classy-cate_production
+  database: classycate_production
   pool: 5
-  username: classy-cate
+  username: classycate
   password:
