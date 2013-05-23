@@ -132,6 +132,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   pg
+  rack-ssl
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)
   thin

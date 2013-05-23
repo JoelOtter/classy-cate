@@ -1,10 +1,10 @@
-%form.login-form
+= form_for("user", :url => user_session_path, :html => {:class => 'login-form'}) do |f|
   %p.field
-    %input{:type => :text, :name => :login, :autocomplete => :off, :placeholder => 'College Login'}
+    = text_field_tag 'user[email]', 'College Email'
     %i.icon-user.icon-large
   %p.field
-    %input{:type => :password, :name => :password, :placeholder => 'Password'}
+    = password_field_tag 'user[password]', 'Password'
     %i.icon-lock.icon-large
   %p.submit
-    %button{:type => :submit, :name => :submit}
+    %button{:type => :submit, :name => :commit}
       %i.icon-arrow-right.icon-large

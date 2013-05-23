@@ -36,5 +36,5 @@ ClassyCate::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-  config.cc_css_url = 'https://localhost:4567/classy-cate.css'
+
 end

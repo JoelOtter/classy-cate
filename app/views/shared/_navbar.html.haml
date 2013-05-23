@@ -22,9 +22,10 @@
           %li
             %a#nav-internalreg{:href => "https://dbc.doc.ic.ac.uk/internalreg"} Module Registration
         %ul.nav.pull-right
-          %li.dropdown
-            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-              %span#cc-current-year
-              %span Change Year
-              %b.caret
-            %ul#cc-year-dropdown.dropdown-menu{:role => "menu"}
+          %li
+            - if user_signed_in?
+              = link_to 'Logout', destroy_user_session_path, method: :delete, :id => 'nav-sign-out'
+            - else
+              = link_to "Login", new_user_session_path, :id => 'nav-login'
+
+          
