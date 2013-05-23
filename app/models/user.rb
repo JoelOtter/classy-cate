@@ -1,3 +1,6 @@
 class User < ActiveRecord::Base
-  # attr_accessible :title, :body
+  has_secure_password
+  attr_accessible :login, :password_digest
+  validates_presence_of :password, :on => :create
+  validates_presence_of :login, :on => :create
 end
