@@ -43,6 +43,10 @@
                   %ul#cc-year-dropdown.dropdown-menu{:role => "menu"}
       
       #page-content
+        - if notice
+          %p.notice= notice
+        - if alert
+          %p.alert= alert
         = yield
 
     %footer.footer.text-center.hide

@@ -1,5 +1,7 @@
 ClassyCate::Application.routes.draw do
 
+  devise_for :users
+
   root :to => "login#root"
 
   match 'exercises/skin' => 'exercises#skin'

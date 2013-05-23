@@ -32,6 +32,8 @@ ClassyCate::Application.configure do
   # Do not compress assets
   config.assets.compress = false
 
+  config.action_mailer.default_url_options = { :host => 'localhost:4567' }
+
   # Expands the lines which load the assets
   config.assets.debug = true
   config.cc_css_url = 'https://localhost:4567/classy-cate.css'
