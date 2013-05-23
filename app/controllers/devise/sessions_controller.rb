@@ -7,6 +7,7 @@ class Devise::SessionsController < DeviseController
 
   # POST /resource/sign_in
   def create
+    puts 'creating'
     if login()
       @user = User.find_by_email(params[:user][:email])
       if !@user.nil?
@@ -34,6 +35,8 @@ class Devise::SessionsController < DeviseController
       clean_up_passwords resource
       respond_with resource
     end
+    puts session
+    puts params[:user][:password]
   end
 
   def login
