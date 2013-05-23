@@ -7,6 +7,7 @@ ClassyCate::Application.routes.draw do
   match 'main_page' => 'main_page#index'
   match 'exercises' => 'exercises#index'
   match 'dashboard' => 'dashboard#index'
+  resource :dashboard
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
