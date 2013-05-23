@@ -1,5 +1,7 @@
 ClassyCate::Application.routes.draw do
 
+  match 'cate/request' => 'cate#request'
+
   devise_for :users
 
   root :to => "main_page#index"

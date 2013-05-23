@@ -1,3 +1,5 @@
+require 'cate'
+
 class Devise::SessionsController < DeviseController
   prepend_before_filter :require_no_authentication, :only => [ :new, :create ]
   prepend_before_filter :allow_params_authentication!, :only => :create
@@ -5,17 +7,50 @@ class Devise::SessionsController < DeviseController
 
   # GET /resource/sign_in
   def new
-    self.resource = build_resource(nil, :unsafe => true)
-    clean_up_passwords(resource)
-    respond_with(resource, serialize_options(resource))
+    puts 'new'
+    if @go
+      login()
+    else
+      self.resource = build_resource(nil, :unsafe => true)
+      clean_up_passwords(resource)
+      respond_with(resource, serialize_options(resource))
+      @go = true
+    end
+  end
+
+  def login
+    @go = false
+    puts 'logging in...'
+    params[:user][:login] = params[:user][:email].split('@')[0]
+    params[:user][:password_confirmation] = params[:user][:password]
+    @cate = Cate.new(params[:user][:login], params[:user][:password])
+    if @cate.verify_login()
+      puts 'cate verifies login'
+      user = User.find_by_email(params[:user][:email])
+      if !user.blank?
+        if user.valid_password?(params[:user][:password])
+          new()
+        end
+      else
+        create()
+      end
+    else
+      new()
+    end
+    @cate.destroy()
   end
 
   # POST /resource/sign_in
   def create
-    self.resource = warden.authenticate!(auth_options)
-    set_flash_message(:notice, :signed_in) if is_navigational_format?
-    sign_in(resource_name, resource)
-    respond_with resource, :location => after_sign_in_path_for(resource)
+    if @go
+      login()
+    else
+      self.resource = warden.authenticate!(auth_options)
+      set_flash_message(:notice, :signed_in) if is_navigational_format?
+      sign_in(resource_name, resource)
+      respond_with(resource, serialize_options(resource))
+      @go = true
+    end
   end
 
   # DELETE /resource/sign_out
@@ -44,4 +79,5 @@ class Devise::SessionsController < DeviseController
   def auth_options
     { :scope => resource_name, :recall => "#{controller_path}#new" }
   end
+
 end

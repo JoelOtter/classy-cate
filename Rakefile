@@ -7,5 +7,5 @@ require File.expand_path('../config/application', __FILE__)
 ClassyCate::Application.load_tasks
 
 task "start" => :environment do
-  system 'thin --ssl -p 4567 start'
+  system 'thin --ssl -p 4567 start -l-'
 end

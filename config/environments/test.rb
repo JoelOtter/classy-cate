@@ -31,8 +31,8 @@ ClassyCate::Application.configure do
 
   # Raise exception on mass assignment protection for Active Record models
   config.active_record.mass_assignment_sanitizer = :strict
-  config.cc_css_url, 'https://localhost:4567/classy-cate.css'
 
+  config.force_ssl = true
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 end

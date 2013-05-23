@@ -60,9 +60,9 @@ ClassyCate::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-  config.cc_css_url = 'https://classy-cate-timeline-dev.herokuapp.com/classy-cate.css'
 
   config.action_mailer.default_url_options = { :host => 'classy-cate.doc.ic.ac.uk' }
+  config.force_ssl = true
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
