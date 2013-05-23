@@ -1,9 +1,9 @@
 = form_for("user", :url => user_session_path, :html => {:class => 'login-form'}) do |f|
   %p.field
-    = text_field_tag 'user[email]', 'College Email'
+    = text_field_tag 'user[email]', nil, :placeholder => 'College Email', :autocomplete => :off
     %i.icon-user.icon-large
   %p.field
-    = password_field_tag 'user[password]', 'Password'
+    = password_field_tag 'user[password]', nil, :placeholder => 'Password'
     %i.icon-lock.icon-large
   %p.submit
     %button{:type => :submit, :name => :commit, :go => true}

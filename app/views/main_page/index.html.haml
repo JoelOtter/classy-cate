@@ -1,1 +1,2 @@
-= render :partial => 'shared/login_form'
+- if not user_signed_in?
+  = render :partial => 'shared/login_form'

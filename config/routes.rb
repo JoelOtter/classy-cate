@@ -1,6 +1,8 @@
 ClassyCate::Application.routes.draw do
 
-  match 'cate/request' => 'cate#request'
+  get "skins/index"
+
+  post '/cate_requests/portal' => 'cate_requests#portal'
 
   devise_for :users
 

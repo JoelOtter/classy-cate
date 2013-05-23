@@ -8,6 +8,8 @@
     = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'
     = javascript_include_tag '//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js'
     = javascript_include_tag "application"
+    - if user_signed_in?
+      = javascript_include_tag 'settings'
     = csrf_meta_tags
   %body
     .container#wrapper
