@@ -5920,3 +5920,3467 @@ Served asset /routeing.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 02:46:00 +0100
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 02:48:57 +0100
+Connecting to database specified by database.yml
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 55ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /shared.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /exercises.js - 200 OK (1ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /givens.js - 200 OK (1ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /grades.js - 200 OK (1ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /login.js - 200 OK (1ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /helpers.js - 200 OK (1ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /main_page.js - 200 OK (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /notes.js - 200 OK (1ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /routeing.js - 200 OK (25ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 02:48:58 +0100
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:29 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 02:50:48 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:49 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 02:50:54 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 02:51:06 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:06 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 02:51:06 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:06 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:06 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:07 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:07 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 02:51:07 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:07 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:07 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:07 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:07 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:07 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:07 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:40 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 02:51:55 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:01:56 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (wrong number of arguments (2 for 1)
+  (in /Users/lawrencejones/Sites/Projects/classy-cate/app/assets/stylesheets/application.css:13)):
+    4:     %title Classy-Cate
+    5:     = stylesheet_link_tag '//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css'
+    6:     = stylesheet_link_tag '//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css'
+    7:     = stylesheet_link_tag    "application"
+    8:     = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'
+    9:     = javascript_include_tag '//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js'
+    10:     = javascript_include_tag "application"
+  app/views/layouts/application.html.haml:7:in `_app_views_layouts_application_html_haml___4118711554864213183_70358467191040'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:02:06 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (couldn't find file 'tree.'
+  (in /Users/lawrencejones/Sites/Projects/classy-cate/app/assets/stylesheets/application.css:13)):
+    4:     %title Classy-Cate
+    5:     = stylesheet_link_tag '//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css'
+    6:     = stylesheet_link_tag '//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css'
+    7:     = stylesheet_link_tag    "application"
+    8:     = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'
+    9:     = javascript_include_tag '//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js'
+    10:     = javascript_include_tag "application"
+  app/views/layouts/application.html.haml:7:in `_app_views_layouts_application_html_haml___4118711554864213183_70358467191040'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:02:09 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (couldn't find file 'tree'
+  (in /Users/lawrencejones/Sites/Projects/classy-cate/app/assets/stylesheets/application.css:13)):
+    4:     %title Classy-Cate
+    5:     = stylesheet_link_tag '//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css'
+    6:     = stylesheet_link_tag '//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css'
+    7:     = stylesheet_link_tag    "application"
+    8:     = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'
+    9:     = javascript_include_tag '//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js'
+    10:     = javascript_include_tag "application"
+  app/views/layouts/application.html.haml:7:in `_app_views_layouts_application_html_haml___4118711554864213183_70358467191040'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (20.9ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (8ms)  (pid 11351)
+Compiled application.css  (14ms)  (pid 11351)
+Completed 200 OK in 35ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/exercises.css?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /exercises.css - 200 OK (1ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /shared.css - 200 OK (0ms)
+
+
+Started GET "/assets/grades.css?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /grades.css - 200 OK (1ms)
+
+
+Started GET "/assets/main_page.css?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /main_page.css - 200 OK (1ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /exercises.js - 200 OK (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /grades.js - 200 OK (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /givens.js - 200 OK (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /helpers.js - 200 OK (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /login.js - 200 OK (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /main_page.js - 200 OK (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /notes.js - 200 OK (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /routeing.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:13 +0100
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled application.css  (0ms)  (pid 11351)
+Completed 200 OK in 15ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:25 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled application.css  (0ms)  (pid 11351)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:30 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:02:41 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:09 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:03:19 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (3ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:03:19 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:03:19 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:03:19 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:19 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:19 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:19 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:19 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:19 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:20 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:20 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:20 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:20 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:20 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:20 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (3ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:03:32 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (3ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:01 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (3ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:04:18 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (3ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 23ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:05:13 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (1.6ms)
+Compiled login.css  (26ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 71ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:13:27 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:31 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:42 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:43 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:14:43 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (49ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 67ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:16:24 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (34ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 55ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:32 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:17:36 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (32ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 73ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:22:05 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (31ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 49ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:21 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /login.css - 200 OK (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /givens.js - 200 OK (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /grades.js - 200 OK (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /helpers.js - 200 OK (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /login.js - 200 OK (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /main_page.js - 200 OK (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /notes.js - 200 OK (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /routeing.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /shared.css - 200 OK (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /exercises.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:23:45 +0100
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (32ms)  (pid 11351)
+Compiled application.css  (2ms)  (pid 11351)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:12 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (32ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 73ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:22 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (32ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 50ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:40 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (32ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 83ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:24:51 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (32ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 51ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:25:28 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (33ms)  (pid 11351)
+Compiled application.css  (24ms)  (pid 11351)
+Completed 200 OK in 81ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:29:54 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (32ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 51ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:30:11 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Processing by LoginController#root as HTML
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (53ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:20 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:22 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:32:23 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:24 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:32:26 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:21 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (32ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 50ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:33:49 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (31ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:02 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (2.0ms)
+Compiled login.css  (32ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 52ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:29 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:34:40 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (32ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:41 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:42 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (32ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 50ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:48 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:49 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:34:52 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (43ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 88ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:53 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:57 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:34:58 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (56ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 75ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:21 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (0.1ms)
+Compiled login.css  (32ms)  (pid 11351)
+Compiled application.css  (1ms)  (pid 11351)
+Completed 200 OK in 51ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:26 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?login=&password=&submit=" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Processing by LoginController#root as HTML
+  Parameters: {"login"=>"", "password"=>"[FILTERED]", "submit"=>""}
+  Rendered login/root.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /main_page.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/exercises.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /exercises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/givens.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /givens.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grades.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /grades.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helpers.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /helpers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routeing.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /routeing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-23 03:35:59 +0100
+Served asset /application.js - 304 Not Modified (0ms)

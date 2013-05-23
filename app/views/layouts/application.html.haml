@@ -11,7 +11,7 @@
     = csrf_meta_tags
   %body
     .container#wrapper
-      .navbar
+      .navbar.hide 
         .navbar-inner
           .container
             %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
@@ -45,7 +45,7 @@
       #page-content
         = yield
 
-    %footer.footer.text-center
+    %footer.footer.text-center.hide
       .row
         #old-cate-button-container.span12.centered
           %span#old-cate-button.btn.btn-mini But I liked the old CATE!

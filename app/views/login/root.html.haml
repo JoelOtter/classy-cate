@@ -1,1 +1,10 @@
-%h1 Hello world
+%form.login-form
+  %p.field
+    %input{:type => :text, :name => :login, :autocomplete => :off, :placeholder => 'College Login'}
+    %i.icon-user.icon-large
+  %p.field
+    %input{:type => :password, :name => :password, :placeholder => 'Password'}
+    %i.icon-lock.icon-large
+  %p.submit
+    %button{:type => :submit, :name => :submit}
+      %i.icon-arrow-right.icon-large

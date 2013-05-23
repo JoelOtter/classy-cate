@@ -10,7 +10,9 @@
  *
  *= require_self
  *= require shared
+ *= require login
  */
+
 html, body {
   height : 100%;
 }
