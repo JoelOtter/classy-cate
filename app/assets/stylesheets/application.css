@@ -31,3 +31,7 @@ html, body {
   margin-top : -128px !important;
   clear : both;
 }
+
+p.notice {
+  visibility : hidden;
+}

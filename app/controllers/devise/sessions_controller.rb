@@ -5,52 +5,50 @@ class Devise::SessionsController < DeviseController
   prepend_before_filter :allow_params_authentication!, :only => :create
   prepend_before_filter { request.env["devise.skip_timeout"] = true }
 
-  # GET /resource/sign_in
-  def new
-    puts 'new'
-    if @go
-      login()
+  # POST /resource/sign_in
+  def create
+    if login()
+      @user = User.find_by_email(params[:user][:email])
+      if !@user.nil?
+        self.resource = warden.authenticate!(auth_options)
+        set_flash_message(:notice, :signed_in) if is_navigational_format?
+        sign_in(resource_name, resource)
+        respond_with resource, :location => after_sign_in_path_for(resource)
+        return true
+      else
+        puts 'USER not exist'
+      end
+    end
+    build_resource
+    if resource.save
+      if resource.active_for_authentication?
+        set_flash_message :notice, :signed_up if is_navigational_format?
+        sign_up(resource_name, resource)
+        respond_with resource, :location => after_sign_up_path_for(resource)
+      else
+        set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_navigational_format?
+        expire_session_data_after_sign_in!
+        respond_with resource, :location => after_inactive_sign_up_path_for(resource)
+      end
     else
-      self.resource = build_resource(nil, :unsafe => true)
-      clean_up_passwords(resource)
-      respond_with(resource, serialize_options(resource))
-      @go = true
+      clean_up_passwords resource
+      respond_with resource
     end
   end
 
   def login
-    @go = false
-    puts 'logging in...'
+    puts 'LOGIN'
+    params[:go] = false
     params[:user][:login] = params[:user][:email].split('@')[0]
-    params[:user][:password_confirmation] = params[:user][:password]
     @cate = Cate.new(params[:user][:login], params[:user][:password])
-    if @cate.verify_login()
-      puts 'cate verifies login'
-      user = User.find_by_email(params[:user][:email])
-      if !user.blank?
-        if user.valid_password?(params[:user][:password])
-          new()
-        end
-      else
-        create()
-      end
-    else
-      new()
-    end
+    verified = @cate.verify_login()
     @cate.destroy()
-  end
-
-  # POST /resource/sign_in
-  def create
-    if @go
-      login()
+    if verified
+      puts 'PASSED LOGIN'
     else
-      self.resource = warden.authenticate!(auth_options)
-      set_flash_message(:notice, :signed_in) if is_navigational_format?
-      sign_in(resource_name, resource)
-      respond_with(resource, serialize_options(resource))
-      @go = true
+      puts 'FAILED'
     end
+    return verified
   end
 
   # DELETE /resource/sign_out
@@ -78,6 +76,49 @@ class Devise::SessionsController < DeviseController
 
   def auth_options
     { :scope => resource_name, :recall => "#{controller_path}#new" }
+  end
+
+  def update_needs_confirmation?(resource, previous)
+    resource.respond_to?(:pending_reconfirmation?) &&
+      resource.pending_reconfirmation? &&
+      previous != resource.unconfirmed_email
+  end
+
+  # Build a devise resource passing in the session. Useful to move
+  # temporary session data to the newly created user.
+  def build_resource(hash=nil)
+    hash ||= resource_params || {}
+    self.resource = resource_class.new_with_session(hash, session)
+  end
+
+  # Signs in a user on sign up. You can overwrite this method in your own
+  # RegistrationsController.
+  def sign_up(resource_name, resource)
+    sign_in(resource_name, resource)
+  end
+
+  # The path used after sign up. You need to overwrite this method
+  # in your own RegistrationsController.
+  def after_sign_up_path_for(resource)
+    after_sign_in_path_for(resource)
+  end
+
+  # The path used after sign up for inactive accounts. You need to overwrite
+  # this method in your own RegistrationsController.
+  def after_inactive_sign_up_path_for(resource)
+    respond_to?(:root_path) ? root_path : "/"
+  end
+
+  # The default url to be used after updating a resource. You need to overwrite
+  # this method in your own RegistrationsController.
+  def after_update_path_for(resource)
+    signed_in_root_path(resource)
+  end
+
+  # Authenticates the current scope and gets the current resource from the session.
+  def authenticate_scope!
+    send(:"authenticate_#{resource_name}!", :force => true)
+    self.resource = send(:"current_#{resource_name}")
   end
 
 end
