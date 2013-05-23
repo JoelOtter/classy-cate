@@ -2,9 +2,11 @@ ClassyCate::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "login#root"
+  root :to => "main_page#index"
 
-  match 'exercises/skin' => 'exercises#skin'
+  match 'main_page' => 'main_page#index'
+  match 'exercises' => 'exercises#index'
+  match 'dashboard' => 'dashboard#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

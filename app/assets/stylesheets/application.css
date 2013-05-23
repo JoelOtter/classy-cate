@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require shared
- *= require login
+ *= require login_form
  */
 
 html, body {
