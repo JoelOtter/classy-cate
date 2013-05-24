@@ -1,4 +1,5 @@
 require 'cate'
+require 'openssl'
 
 class Devise::SessionsController < DeviseController
   prepend_before_filter :require_no_authentication, :only => [ :new, :create ]
@@ -7,7 +8,6 @@ class Devise::SessionsController < DeviseController
 
   # POST /resource/sign_in
   def create
-    puts 'creating'
     if login()
       @user = User.find_by_email(params[:user][:email])
       if !@user.nil?
@@ -21,6 +21,7 @@ class Devise::SessionsController < DeviseController
       end
     end
     build_resource
+    generate_session_pass @user, params[:user][:password], session[:session_id]
     if resource.save
       if resource.active_for_authentication?
         set_flash_message :notice, :signed_up if is_navigational_format?
@@ -35,8 +36,17 @@ class Devise::SessionsController < DeviseController
       clean_up_passwords resource
       respond_with resource
     end
-    puts session
-    puts params[:user][:password]
+  end
+
+  def generate_session_pass(user, pass, session_id)
+    puts 'MAKING CIPHER'
+    aes = OpenSSL::Cipher::Cipher.new 'AES-256-CBC'
+    aes.encrypt
+    aes.key = session_id
+    cipher = aes.update(pass) + aes.final
+    cipher = Base64.encode64(cipher).encode('utf-8')
+    user.update_attribute('session_pass', cipher)
+    puts 'CIPHER MADE'
   end
 
   def login

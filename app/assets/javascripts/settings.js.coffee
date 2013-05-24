@@ -1,4 +1,5 @@
 $ -> 
+  console.log 'trying'
   $.ajax
     type: 'GET'
     url: '/skins/index'

@@ -22,7 +22,6 @@ window.initial_load = ->
   path = window.location.pathname
   if path is '/'
     hash = (window.location.hash).replace('#', 'dashboard')
-    console.log window.MAIN_PAGE_HTML
     main_page_vars = extract_main_page_data window.MAIN_PAGE_HTML
     populate_layout(main_page_vars)
 
