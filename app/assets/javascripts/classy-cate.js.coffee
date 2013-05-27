@@ -112,6 +112,9 @@ load_exercises_page = (e, fallback, shifting, url) ->
       $('#page-content').html('').append window.EXERCISES.clone()
       populate_exercises_page(exercise_page_vars)
 
+download_cate_material = (path) ->
+  window.location.href = '/cate_requests/download?path=' + path
+
 
 #///////////////////////////////////////////////////////////////////////////////
 # Extraction
@@ -679,7 +682,16 @@ populate_exercises_page = (vars, forDashboard) ->
 
     if ex.spec?
       (specCell = row.find('.spec')).text('')
-      ex.spec_element = $(document.createElement('a')).attr('href',ex.spec).html('Spec Link').appendTo(specCell)
+      ex.spec_element = $(document.createElement('a'))
+        .attr('href',ex.spec)
+        .html('Spec Link')
+        .appendTo(specCell)
+        .click (e) ->
+          console.log 'Clicked'
+          if e? 
+            e.preventDefault()
+            e.stopPropagation()
+          download_cate_material $(this).attr 'href'
 
     if ex.givens?
       givensCell = row.find('.given').text('')

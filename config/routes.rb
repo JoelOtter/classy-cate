@@ -7,6 +7,7 @@ ClassyCate::Application.routes.draw do
 
   post '/cate_requests/portal' => 'cate_requests#portal'
   get '/cate_requests/profile_pic' => 'cate_requests#profile_pic'
+  get '/cate_requests/download' => 'cate_requests#download'
 
   devise_for :users
 

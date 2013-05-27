@@ -5,6 +5,7 @@ class CateRequestsController < ApplicationController
 
   # POST to this action with credetials and cate path
   def portal
+    puts params
     puts 'HITTING UP CATE!'
     # create a new cate instance and use to access data
     cate = Cate.new current_user.login
@@ -23,6 +24,15 @@ class CateRequestsController < ApplicationController
     response = cate.get_profile_pic(get_pass())
     cate.destroy()
     send_data response.body, :type => 'image/jpg'
+  end
+
+  def download
+    puts params
+    cate = Cate.new current_user.login
+    response = cate.get_page(params[:path], get_pass())
+    puts response['content_disposition']
+    cate.destroy()
+    send_data response.body, :type => response.content_type
   end
 
   def get_pass
