@@ -16,7 +16,17 @@ class Cate
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     request = Net::HTTP::Get.new(url.request_uri)
     request.basic_auth(@user, @pass)
-    return http.start {|http| http.request(request) }
+    response = http.start {|http| http.request(request) }
+    case response
+    when Net::HTTPSuccess then
+      return response
+    when Net::HTTPRedirection then
+      puts 'Redirecting to'
+      puts response['location']
+      get_page response['location']
+    else
+      return reponse
+    end
   end
 
   def verify_login

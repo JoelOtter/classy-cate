@@ -1,8 +1,5 @@
 @classy ||= {}
 classy = @classy
-MAIN_PAGE_HTML = @MAIN_PAGE_HTML
-GRADES_PAGE_HTML = @GRADES_PAGE_HTML 
-EXERCISES_PAGE_HTML = @EXERCISES_PAGE_HTML
 
 #///////////////////////////////////////////////////////////////////////////////
 # Routeing
@@ -21,11 +18,10 @@ populate_html = (element, raw) ->
 window.initial_load = ->
   path = window.location.pathname
   if path is '/'
-    hash = (window.location.hash).replace('#', 'dashboard')
-    main_page_vars = extract_main_page_data window.MAIN_PAGE_HTML
-    populate_layout(main_page_vars)
-
-    if hash == "grades"
+    if hash == '' or hash == 'dashboard'
+      hash = (window.location.hash).replace('#', 'dashboard')
+      load_dashboard_page()
+    else if hash == "grades"
       load_grades_page()
     else if hash == "timetable"
       load_exercises_page()
@@ -42,11 +38,13 @@ window.initial_load = ->
 
 
 load_dashboard_page = (e) ->
+  console.log 'loading dash'
   e.preventDefault() if e?
   window.location.hash = "dashboard"
-  url = $('#nav-dashboard').attr('href')
+  url = '/'
   load_cate_page url, (body) ->
     main_page_vars = extract_main_page_data(body)
+    console.log main_page_vars
     populate_html('#page-content', MAIN_PAGE_HTML)
     populate_main_page(main_page_vars)
 
@@ -814,18 +812,17 @@ text_extract = (html) ->
   html.text().trim().replace(/(\r\n|\n|\r)/gm,"");
 
 load_cate_page = (url, callback) ->
+  console.log 'loading cate page'
+  url = '/'   # testing
   $.ajax
     type: 'POST'
     url: '/cate_requests/portal.json'
-    data: {user : classy.user, pass : classy.pass, path : url}
-    dataType : 'html'
+    data: {path : url}
     success: (data) ->
-      data = data.split(/<body.*>/)[1].split('</body>')[0]
-      body = $('<body/>').append(data)
-      # remove icons- cates really bad at providing them for
-      # an ajax, was hanging terribly in safari
-      icons = body.find('img[src^="icons/"]')
-      icons.remove()
+      data = data.content.split(/<body.*>/)[1].split('</body>')[0]
+      # totally remove all images before dom parse
+      data = data.replace(/<img.+src\="icons\/.*>/g, '')
+      body = $('<div/>').append(data)
       callback body
 
 populate_layout = (vars) ->

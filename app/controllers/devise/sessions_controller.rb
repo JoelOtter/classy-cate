@@ -21,6 +21,7 @@ class Devise::SessionsController < DeviseController
       end
     end
     build_resource
+    puts cookies
     generate_session_pass @user, params[:user][:password], session[:session_id]
     if resource.save
       if resource.active_for_authentication?
@@ -40,12 +41,17 @@ class Devise::SessionsController < DeviseController
 
   def generate_session_pass(user, pass, session_id)
     puts 'MAKING CIPHER'
-    aes = OpenSSL::Cipher::Cipher.new 'AES-256-CBC'
-    aes.encrypt
-    aes.key = session_id
-    cipher = aes.update(pass) + aes.final
-    cipher = Base64.encode64(cipher).encode('utf-8')
-    user.update_attribute('session_pass', cipher)
+    # push into the cookie the session_id that is
+    # about to expire- works for a random key
+    cookies.signed[:cipher_key] = session_id
+    # generate a key from the old session id
+    key = Digest::SHA256.hexdigest(session_id)
+    # encrypt the password with the digest key
+    cipher = Encryptor.encrypt(:value => pass, :key => key)
+    # encode the cipher for db storage
+    encoded = Base64.encode64(cipher).encode('utf-8')
+    # save the scrambled pass into the database
+    user.update_attribute('session_pass', encoded)
     puts 'CIPHER MADE'
   end
 
