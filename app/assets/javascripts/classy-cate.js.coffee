@@ -18,27 +18,20 @@ populate_html = (element, raw) ->
 window.initial_load = ->
   path = window.location.pathname
   if path is '/'
-    if hash == '' or hash == 'dashboard'
+    if !hash? or hash == 'dashboard'
       hash = (window.location.hash).replace('#', 'dashboard')
-      load_dashboard_page()
+      load_dashboard_page null, populate_layout
     else if hash == "grades"
       load_grades_page()
     else if hash == "timetable"
       load_exercises_page()
-    else
-      load_dashboard_page()
-  else if /student/i.test(path)
-    window.location = "/#grades"
-  else if /timetable/i.test(path)
-    window.location = "/#timetable"
   else
     cate_notice = $('<div>Classy CATE hasn\'t been implemented for this page yet<br/><a href="https://github.com/PeterHamilton/classy-cate">Implement it!</a></div>')
     cate_notice.attr('style', 'padding: 20px; margin-bottom: 20px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); border: 3px solid #eed3d7; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; color: #b94a48; background-color: #f2dede; font-size: 18px; text-align: center;')
     $('body').prepend(cate_notice)
 
 
-load_dashboard_page = (e) ->
-  console.log 'loading dash'
+load_dashboard_page = (e, cb) ->
   e.preventDefault() if e?
   window.location.hash = "dashboard"
   url = '/'
@@ -47,6 +40,7 @@ load_dashboard_page = (e) ->
     console.log main_page_vars
     $('#page-content').html('').append window.DASHBOARD
     populate_main_page(main_page_vars)
+    if cb? then cb(main_page_vars)
 
 
 load_grades_page = (e) ->
@@ -54,7 +48,7 @@ load_grades_page = (e) ->
   window.location.hash = "grades"
   load_cate_page $('#nav-grades').attr('href'), (body) ->
     grade_page_vars = extract_grades_page_data(body)
-    populate_html('#page-content', GRADES_PAGE_HTML)
+    $('#page-content').html('').append window.GRADES
     populate_grades_page(grade_page_vars)
 
 load_exercises_page = (e, fallback, shifting, url) ->
@@ -100,7 +94,7 @@ load_exercises_page = (e, fallback, shifting, url) ->
         go_forth_and_multiply = false
         load_exercises_page e, true, null
     if go_forth_and_multiply
-      populate_html('#page-content', EXERCISES_PAGE_HTML)
+      $('#page-content').html('').append window.EXERCISES
       populate_exercises_page(exercise_page_vars)
 
 
@@ -303,6 +297,7 @@ extract_main_page_data = (html) ->
   projects_portal_link = other_func_links[3]
   individual_records_link = other_func_links[4]
 
+  console.log html.html()
   default_class = html.find('input[name=class]:checked').val()
   default_period = html.find('input[name=period]:checked').val()
 
@@ -812,8 +807,7 @@ text_extract = (html) ->
   html.text().trim().replace(/(\r\n|\n|\r)/gm,"");
 
 load_cate_page = (url, callback) ->
-  console.log 'loading cate page'
-  url = '/'   # testing
+  console.log 'loading url - ' + url
   $.ajax
     type: 'POST'
     url: '/cate_requests/portal.json'
@@ -821,12 +815,12 @@ load_cate_page = (url, callback) ->
     success: (data) ->
       data = data.content.split(/<body.*>/)[1].split('</body>')[0]
       # totally remove all icons before dom parse
-      data = data.replace(/<img.+src\="icons\/.*>/g, '')
-      data = data.replace(/<img.+>/g, '')
+      data = data.replace(/<img[^>]*>/g, '')
       body = $('<div/>').append(data)
       callback body
 
 populate_layout = (vars) ->
+  console.log 'Populating layout'
   $('#cc-version').html(vars.version)
   $('#nav-dashboard').attr('href', vars.current_url)
   $('#nav-exercises').attr('href', vars.timetable_url)
