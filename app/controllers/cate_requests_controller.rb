@@ -10,11 +10,11 @@ class CateRequestsController < ApplicationController
     cate = Cate.new current_user.login
     # save response
     response = cate.get_page(params[:path], get_pass())
-    puts response.body
+    puts response['location']
     # invalidate cate instance
     cate.destroy()
     # render the result
-    render :json => {:content => response.body}
+    render :json => {:content => response.body, :path => response['location']}
   end
 
   def profile_pic

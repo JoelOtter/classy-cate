@@ -11,6 +11,8 @@
  *= require_self
  *= require shared
  *= require login_form
+ *= require timeline
+ *= require dashboard
  */
 
 html, body {
@@ -23,7 +25,7 @@ html, body {
 
 #page-content {
   overflow : auto;
-  padding-bottom : 300px;
+  padding-bottom : 200px;
 }
 
 .footer {

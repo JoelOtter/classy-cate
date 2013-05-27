@@ -19,13 +19,14 @@ class Cate
     response = @http.start {|http| http.request(request) }
     case response
     when Net::HTTPSuccess then
+      response['location'] = path
       return response
     when Net::HTTPRedirection then
       puts 'Redirecting to'
       puts response['location']
       get_page response['location'], pass
     else
-      return reponse
+      return response
     end
   end
 

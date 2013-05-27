@@ -1,5 +1,11 @@
-@classy ||= {}
-classy = @classy
+PERIOD = null
+TIMELINE_STRUCTURE = {
+      title : ['id','type']
+      extendedTitle : ['name']
+      content :
+        names : ['HAND IN', 'SPEC', 'GIVENS']
+        keys : ['handin', 'spec', 'given_element']
+  }
 
 #///////////////////////////////////////////////////////////////////////////////
 # Routeing
@@ -11,9 +17,6 @@ classy = @classy
 # extracts the body. 
 # The body is then sent to the callback given, typically an function that runs
 # extraction on the body, then calls the populate method.
-
-populate_html = (element, raw) ->
-  $(element).html($("<div/>").html(raw).text())
 
 window.initial_load = ->
   path = window.location.pathname
@@ -30,6 +33,19 @@ window.initial_load = ->
     cate_notice.attr('style', 'padding: 20px; margin-bottom: 20px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); border: 3px solid #eed3d7; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; color: #b94a48; background-color: #f2dede; font-size: 18px; text-align: center;')
     $('body').prepend(cate_notice)
 
+load_cate_page = (url, callback) ->
+  console.log 'loading url - ' + url
+  $.ajax
+    type: 'POST'
+    url: '/cate_requests/portal.json'
+    data: {path : url}
+    success: (data) ->
+      window.last_url = data.path
+      data = data.content.split(/<body.*>/)[1].split('</body>')[0]
+      # totally remove all icons before dom parse
+      data = data.replace(/<img[^>]*>/g, '')
+      body = $('<div/>').append(data)
+      callback body
 
 load_dashboard_page = (e, cb) ->
   e.preventDefault() if e?
@@ -37,10 +53,9 @@ load_dashboard_page = (e, cb) ->
   url = '/'
   load_cate_page url, (body) ->
     main_page_vars = extract_main_page_data(body)
-    console.log main_page_vars
-    $('#page-content').html('').append window.DASHBOARD
-    populate_main_page(main_page_vars)
+    $('#page-content').html('').append window.DASHBOARD.clone()
     if cb? then cb(main_page_vars)
+    populate_main_page(main_page_vars)
 
 
 load_grades_page = (e) ->
@@ -48,7 +63,7 @@ load_grades_page = (e) ->
   window.location.hash = "grades"
   load_cate_page $('#nav-grades').attr('href'), (body) ->
     grade_page_vars = extract_grades_page_data(body)
-    $('#page-content').html('').append window.GRADES
+    $('#page-content').html('').append window.GRADES.clone()
     populate_grades_page(grade_page_vars)
 
 load_exercises_page = (e, fallback, shifting, url) ->
@@ -94,7 +109,7 @@ load_exercises_page = (e, fallback, shifting, url) ->
         go_forth_and_multiply = false
         load_exercises_page e, true, null
     if go_forth_and_multiply
-      $('#page-content').html('').append window.EXERCISES
+      $('#page-content').html('').append window.EXERCISES.clone()
       populate_exercises_page(exercise_page_vars)
 
 
@@ -266,7 +281,7 @@ extract_exercise_page_data = (html) ->
 # CATE Homepage
 # html - A jQuery object representing the page body
 extract_main_page_data = (html) ->
-  current_url = window.temp.URL
+  current_url = window.last_url
   current_year = current_url.match("keyp=([0-9]+)")[1] #TODO: Error check
   current_user = current_url.match("[0-9]+:(.*)")[1] # TODO: Error Check
 
@@ -297,7 +312,6 @@ extract_main_page_data = (html) ->
   projects_portal_link = other_func_links[3]
   individual_records_link = other_func_links[4]
 
-  console.log html.html()
   default_class = html.find('input[name=class]:checked').val()
   default_period = html.find('input[name=period]:checked').val()
 
@@ -805,19 +819,6 @@ activate_nostalgia_mode = ->
 
 text_extract = (html) ->
   html.text().trim().replace(/(\r\n|\n|\r)/gm,"");
-
-load_cate_page = (url, callback) ->
-  console.log 'loading url - ' + url
-  $.ajax
-    type: 'POST'
-    url: '/cate_requests/portal.json'
-    data: {path : url}
-    success: (data) ->
-      data = data.content.split(/<body.*>/)[1].split('</body>')[0]
-      # totally remove all icons before dom parse
-      data = data.replace(/<img[^>]*>/g, '')
-      body = $('<div/>').append(data)
-      callback body
 
 populate_layout = (vars) ->
   console.log 'Populating layout'
