@@ -9,8 +9,8 @@ ClassyCate::Application.routes.draw do
   get '/cate_requests/profile_pic' => 'cate_requests#profile_pic'
   get '/cate_requests/download' => 'cate_requests#download'
 
-  devise_for :users
-
+  post 'login' => 'sessions#create'
+  get 'logout' => 'sessions#logout'
   root :to => "main_page#index"
 
   match 'main_page' => 'main_page#index'

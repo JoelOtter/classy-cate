@@ -1,17 +1,12 @@
-require 'cate'
-require 'openssl'
-
 class CateRequestsController < ApplicationController
 
   # POST to this action with credetials and cate path
   def portal
-    puts params
-    puts 'HITTING UP CATE!'
+    current_user.login
     # create a new cate instance and use to access data
-    cate = Cate.new current_user.login
+    cate = Cate::Connection.new current_user.login
     # save response
     response = cate.get_page(params[:path], get_pass())
-    puts response['location']
     # invalidate cate instance
     cate.destroy()
     # render the result
@@ -19,16 +14,15 @@ class CateRequestsController < ApplicationController
   end
 
   def profile_pic
-    puts 'GETTING PROFILE PIC'
-    cate = Cate.new current_user.login
+    cate = Cate::Connection.new current_user.login
     response = cate.get_profile_pic(get_pass())
     cate.destroy()
     send_data response.body, :type => 'image/jpg'
   end
 
   def download
-    puts params
-    cate = Cate.new current_user.login
+    puts 'DOWNLOAD FROM CATE - ' + params[:path]
+    cate = Cate::Connection.new current_user.login
     response = cate.get_page(params[:path], get_pass())
     puts response['content_disposition']
     cate.destroy()
@@ -36,7 +30,6 @@ class CateRequestsController < ApplicationController
   end
 
   def get_pass
-    puts 'ACCESSING USER PASS'
     # get the current encoded password
     encoded = current_user.session_pass
     # decode that result from utf-8

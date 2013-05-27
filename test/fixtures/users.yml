@@ -2,8 +2,14 @@
 
 one:
   login: MyString
-  password_digest: MyString
+  email: MyString
+  password_hash: MyString
+  password_salt: MyString
+  session_pass: MyString
 
 two:
   login: MyString
-  password_digest: MyString
+  email: MyString
+  password_hash: MyString
+  password_salt: MyString
+  session_pass: MyString
