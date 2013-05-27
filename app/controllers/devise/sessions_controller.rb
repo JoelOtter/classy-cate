@@ -59,9 +59,9 @@ class Devise::SessionsController < DeviseController
     puts 'LOGIN'
     params[:go] = false
     params[:user][:login] = params[:user][:email].split('@')[0]
-    @cate = Cate.new(params[:user][:login], params[:user][:password])
-    verified = @cate.verify_login()
-    @cate.destroy()
+    cate = Cate.new params[:user][:login]
+    verified = cate.verify_login(params[:user][:password])
+    cate.destroy()
     if verified
       puts 'PASSED LOGIN'
     else

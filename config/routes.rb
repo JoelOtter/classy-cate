@@ -1,8 +1,12 @@
 ClassyCate::Application.routes.draw do
 
   get "skins/index"
+  get "skins/dashboard"
+  get "skins/grades"
+  get "skins/exercises"
 
   post '/cate_requests/portal' => 'cate_requests#portal'
+  get '/cate_requests/profile_pic' => 'cate_requests#profile_pic'
 
   devise_for :users
 

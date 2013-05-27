@@ -7,14 +7,22 @@ class CateRequestsController < ApplicationController
   def portal
     puts 'HITTING UP CATE!'
     # create a new cate instance and use to access data
-    cate = Cate.new current_user.login, get_pass()
+    cate = Cate.new current_user.login
     # save response
-    response = cate.get_page(params[:path])
+    response = cate.get_page(params[:path], get_pass())
     puts response.body
     # invalidate cate instance
     cate.destroy()
     # render the result
     render :json => {:content => response.body}
+  end
+
+  def profile_pic
+    puts 'GETTING PROFILE PIC'
+    cate = Cate.new current_user.login
+    response = cate.get_profile_pic(get_pass())
+    cate.destroy()
+    send_data response.body, :type => 'image/jpg'
   end
 
   def get_pass

@@ -45,7 +45,7 @@ load_dashboard_page = (e) ->
   load_cate_page url, (body) ->
     main_page_vars = extract_main_page_data(body)
     console.log main_page_vars
-    populate_html('#page-content', MAIN_PAGE_HTML)
+    $('#page-content').html('').append window.DASHBOARD
     populate_main_page(main_page_vars)
 
 
@@ -551,7 +551,7 @@ populate_grades_page = (vars) ->
 # Construction
 #///////////////////////////////////////////////////////////////////////////////
 populate_main_page = (vars) ->
-  $('#cc-identity-profile-image').attr('src', vars.profile_image_src)
+  $('#cc-identity-profile-image').attr('src', '/cate_requests/profile_pic')
   $('#cc-identity-first-name').html(vars.first_name)
   $('#cc-identity-last-name').html(vars.last_name)
   $('#cc-identity-login').html(vars.login)
@@ -820,8 +820,9 @@ load_cate_page = (url, callback) ->
     data: {path : url}
     success: (data) ->
       data = data.content.split(/<body.*>/)[1].split('</body>')[0]
-      # totally remove all images before dom parse
+      # totally remove all icons before dom parse
       data = data.replace(/<img.+src\="icons\/.*>/g, '')
+      data = data.replace(/<img.+>/g, '')
       body = $('<div/>').append(data)
       callback body
 
