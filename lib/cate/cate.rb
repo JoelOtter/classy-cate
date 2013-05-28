@@ -1,3 +1,4 @@
+# encoding: UTF-8
 require 'net/https'
 require 'net/http'
 require 'uri'
@@ -18,7 +19,7 @@ module Cate
       # generate a key from the old session id
       key = Digest::SHA256.hexdigest(digest)
       # encrypt the password with the digest key
-      cipher = Encryptor.encrypt(:value => pass, :key => key)
+      cipher = Encryptor.encrypt(value: pass, key: key)
       # encode the cipher for db storage
       encoded = Base64.encode64(cipher).encode('utf-8')
       # save the scrambled pass into the database
@@ -26,18 +27,14 @@ module Cate
     end
 
     def get_page(path, pass)
-      url = URI.parse('https://cate.doc.ic.ac.uk/' + path)
-      request = Net::HTTP::Get.new(url.request_uri)
-      request.basic_auth(@user, pass)
-      response = @http.start {|http| http.request(request) }
+      request = make_request path, pass
+      response = @http.start { |http| http.request(request) }
       case response
       when Net::HTTPSuccess then
         response['location'] = path
         return response
       when Net::HTTPRedirection then
         get_page response['location'], pass
-      else
-        return response
       end
     end
 
@@ -46,13 +43,21 @@ module Cate
     end
 
     def verify_login(pass)
-      response = get_page('/',pass)
+      response = get_page('/', pass)
       response.code != '401'
     end
 
     def destroy
       @user = ''
     end
-    
+
+    private
+    def make_request(path, pass)
+      url = URI.parse('https://cate.doc.ic.ac.uk/' + path)
+      request = Net::HTTP::Get.new(url.request_uri)
+      request.basic_auth(@user, pass)
+      return request
+    end
+
   end
 end

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class SessionsController < ApplicationController
 
   skip_before_filter :authenticate_user!
@@ -10,7 +11,7 @@ class SessionsController < ApplicationController
       setup_key user, pass, SecureRandom.urlsafe_base64
       alert = nil
     end
-    redirect_to root_url, :alert => alert
+    redirect_to root_url, alert: alert
   end
 
   def setup_key(user, pass, token)
@@ -24,7 +25,7 @@ class SessionsController < ApplicationController
     user = User.find_by_login(login)
     if !user
       user = User.new(params[:user])
-    elsif !User.authenticate(login,pass)
+    elsif !User.authenticate(login, pass)
       user.password = pass
     end
     user.save()
