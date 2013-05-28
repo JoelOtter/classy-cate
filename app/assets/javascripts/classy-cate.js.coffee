@@ -40,12 +40,16 @@ load_cate_page = (url, callback) ->
     url: '/cate_requests/portal.json'
     data: {path : url}
     success: (data) ->
-      window.last_url = data.path
-      data = data.content.split(/<body.*>/)[1].split('</body>')[0]
-      # totally remove all icons before dom parse
-      data = data.replace(/<img[^>]*>/g, '')
-      body = $('<div/>').append(data)
-      callback body
+      console.log data
+      if data.status? && data.status == 'UserDenied'
+        window.location = data.redirect
+      else
+        window.last_url = data.path
+        data = data.content.split(/<body.*>/)[1].split('</body>')[0]
+        # totally remove all icons before dom parse
+        data = data.replace(/<img[^>]*>/g, '')
+        body = $('<div/>').append(data)
+        callback body
 
 load_dashboard_page = (e, cb) ->
   e.preventDefault() if e?

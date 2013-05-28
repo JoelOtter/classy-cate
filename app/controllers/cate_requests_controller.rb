@@ -12,6 +12,8 @@ class CateRequestsController < ApplicationController
     cate.destroy()
     # render the result
     render json: { content: response.body, path: response['location'] }
+  rescue
+    bar_user()
   end
 
   def profile_pic
@@ -19,6 +21,8 @@ class CateRequestsController < ApplicationController
     response = cate.get_profile_pic(get_pass())
     cate.destroy()
     send_data response.body, type: 'image/jpg'
+  rescue
+    bar_user()
   end
 
   def download
@@ -28,6 +32,15 @@ class CateRequestsController < ApplicationController
     puts response['content_disposition']
     cate.destroy()
     send_data response.body, type: response.content_type
+  rescue
+    bar_user()
+  end
+
+  def bar_user
+    puts 'USER CONFLICT - Multiple sessions on one login'
+    session[:user_login] = nil
+    flash[:alert] = 'You have been signed in on another computer'
+    render json: { status: 'UserDenied', redirect: '/' }
   end
 
   def get_pass
@@ -41,6 +54,8 @@ class CateRequestsController < ApplicationController
     key = Digest::SHA256.hexdigest cookie_key
     # decrypt and return the password
     Encryptor.decrypt(value: cipher, key: key)
+  rescue
+    raise 'UserDenied'
   end
 
 end

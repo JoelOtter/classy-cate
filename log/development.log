@@ -60532,3 +60532,2430 @@ Processing by CateRequestsController#portal as JSON
   [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
 Completed 200 OK in 369ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+  [1m[36m (112.3ms)[0m  [1mDROP DATABASE IF EXISTS "classycate_development"[0m
+  [1m[35m (111.1ms)[0m  DROP DATABASE IF EXISTS "classycate_test"
+  [1m[36m (227.1ms)[0m  [1mCREATE DATABASE "classycate_development" ENCODING = 'unicode'[0m
+  [1m[35m (231.4ms)[0m  CREATE DATABASE "classycate_test" ENCODING = 'unicode'
+  [1m[36m (5.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255), "email" character varying(255), "password_hash" character varying(255), "password_salt" character varying(255), "session_pass" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130528011513')[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:40:25 +0100
+Connecting to database specified by database.yml
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (2.2ms)
+  Rendered main_page/index.html.haml within layouts/application (54.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 97ms (Views: 90.9ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 04:40:27 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cl4RxUoXTZUTmH3zvDcOm7RVdPMeNirgie7wPs7pJrw=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'lmj112@ic.ac.uk' LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 03:40:28 UTC +00:00], ["email", "lmj112@ic.ac.uk"], ["login", "lmj112"], ["password_hash", "$2a$10$LwhpZoGp2OfGtXDOLKjAiOEYqGvNWllaYuX9vJ0u7FKnbznfhtfz."], ["password_salt", "$2a$10$LwhpZoGp2OfGtXDOLKjAiO"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 03:40:28 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Completed 500 Internal Server Error in 805ms
+
+NoMethodError (undefined method `update_attribute' for true:TrueClass):
+  lib/cate/cate.rb:25:in `generate_session_pass'
+  app/controllers/sessions_controller.rb:11:in `create'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:41:19 +0100
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered main_page/index.html.haml within layouts/application (11.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (5.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (2.2ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/login_form.css?body=1" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Served asset /login_form.css - 200 OK (1ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Served asset /shared.css - 200 OK (1ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Served asset /timeline.css - 200 OK (1ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Served asset /dashboard.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Served asset /bootstrap.min.js - 200 OK (1ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Served asset /timeline.js - 200 OK (0ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Served asset /classy-cate.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/settings.js?body=1" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Served asset /settings.js - 200 OK (1ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Processing by SkinsController#index as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered grades/_index.html.haml (5.7ms)
+  Rendered exercises/_index.html.haml (5.3ms)
+  Rendered shared/_grades_schema.html.haml (7.2ms)
+  Rendered shared/_givens_modal.html.haml (1.8ms)
+  Rendered dashboard/_index.html.haml (32.9ms)
+  Rendered skins/index.html.haml within layouts/application (47.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (0.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 59ms (Views: 57.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:41:20 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `encode' for nil:NilClass):
+  app/controllers/cate_requests_controller.rb:37:in `get_pass'
+  app/controllers/cate_requests_controller.rb:10:in `portal'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.3ms)
+Connecting to database specified by database.yml
+  [1m[36m (111.8ms)[0m  [1mDROP DATABASE IF EXISTS "classycate_development"[0m
+  [1m[35m (110.1ms)[0m  DROP DATABASE IF EXISTS "classycate_test"
+  [1m[36m (230.7ms)[0m  [1mCREATE DATABASE "classycate_development" ENCODING = 'unicode'[0m
+  [1m[35m (230.1ms)[0m  CREATE DATABASE "classycate_test" ENCODING = 'unicode'
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255), "email" character varying(255), "password_hash" character varying(255), "password_salt" character varying(255), "session_pass" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130528011513')[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:41:30 +0100
+Connecting to database specified by database.yml
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (2.4ms)
+  Rendered main_page/index.html.haml within layouts/application (55.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 100ms (Views: 93.7ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 04:41:32 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cl4RxUoXTZUTmH3zvDcOm7RVdPMeNirgie7wPs7pJrw=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'lmj112@ic.ac.uk' LIMIT 1
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 03:41:33 UTC +00:00], ["email", "lmj112@ic.ac.uk"], ["login", "lmj112"], ["password_hash", "$2a$10$N8hufLiWdTQ5TGHHddqQoefMjntVrsgf9KvWNlhGgpsTBLh1ckQWK"], ["password_salt", "$2a$10$N8hufLiWdTQ5TGHHddqQoe"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 03:41:33 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE "users" SET "session_pass" = 'kS/KzwSSCssbZ9unMt1qKQ==
+', "password_salt" = '$2a$10$X7vkZP1Ro5g2D2qYrG/4Me', "password_hash" = '$2a$10$X7vkZP1Ro5g2D2qYrG/4Meplq4bDopcOYyjjfTNXGCGOzI8Y046HW', "updated_at" = '2013-05-28 03:41:33.126000' WHERE "users"."id" = 1
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to https://localhost:4567/
+Completed 302 Found in 949ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:41:33 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered main_page/index.html.haml within layouts/application (1.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (4.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (2.1ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 04:41:33 +0100
+Processing by SkinsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered grades/_index.html.haml (5.8ms)
+  Rendered exercises/_index.html.haml (5.8ms)
+  Rendered shared/_grades_schema.html.haml (5.9ms)
+  Rendered shared/_givens_modal.html.haml (2.5ms)
+  Rendered dashboard/_index.html.haml (28.8ms)
+  Rendered skins/index.html.haml within layouts/application (43.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:41:33 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 641ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 04:41:33 +0100
+Processing by CateRequestsController#profile_pic as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Sent data  (2.1ms)
+Completed 200 OK in 227ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:41:34 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 396ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+Connecting to database specified by database.yml
+  [1m[36m (111.9ms)[0m  [1mDROP DATABASE IF EXISTS "classycate_development"[0m
+  [1m[35m (112.6ms)[0m  DROP DATABASE IF EXISTS "classycate_test"
+  [1m[36m (230.6ms)[0m  [1mCREATE DATABASE "classycate_development" ENCODING = 'unicode'[0m
+  [1m[35m (232.6ms)[0m  CREATE DATABASE "classycate_test" ENCODING = 'unicode'
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255), "email" character varying(255), "password_hash" character varying(255), "password_salt" character varying(255), "session_pass" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130528011513')[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:46:21 +0100
+Connecting to database specified by database.yml
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (2.3ms)
+  Rendered main_page/index.html.haml within layouts/application (51.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 96ms (Views: 89.5ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 04:46:26 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cl4RxUoXTZUTmH3zvDcOm7RVdPMeNirgie7wPs7pJrw=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'lmj112@ic.ac.uk' LIMIT 1
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 03:46:27 UTC +00:00], ["email", "lmj112@ic.ac.uk"], ["login", "lmj112"], ["password_hash", "$2a$10$T.a/cS24QQmXFDJ4BdipCObXgkxSW6iYXZtxc8WCCEsfmXi9dUBlK"], ["password_salt", "$2a$10$T.a/cS24QQmXFDJ4BdipCO"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 03:46:27 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE "users" SET "session_pass" = 'KfxmzrU69WLy0HmYyDehvg==
+', "password_salt" = '$2a$10$zTW.UD37PGmYl2eAPehnYO', "password_hash" = '$2a$10$zTW.UD37PGmYl2eAPehnYOfiqg0Wp5AnZ.mDjH/HJCJ7utcmtq4Ze', "updated_at" = '2013-05-28 03:46:27.767868' WHERE "users"."id" = 1
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to https://localhost:4567/
+Completed 302 Found in 1235ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:46:27 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered main_page/index.html.haml within layouts/application (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (5.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (2.1ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 04:46:27 +0100
+Processing by SkinsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered grades/_index.html.haml (6.0ms)
+  Rendered exercises/_index.html.haml (8.0ms)
+  Rendered shared/_grades_schema.html.haml (6.4ms)
+  Rendered shared/_givens_modal.html.haml (2.4ms)
+  Rendered dashboard/_index.html.haml (26.4ms)
+  Rendered skins/index.html.haml within layouts/application (44.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:46:27 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 602ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 04:46:28 +0100
+Processing by CateRequestsController#profile_pic as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Sent data  (24.4ms)
+Completed 200 OK in 190ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:46:28 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 686ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logout?id=nav-sign-out" for 127.0.0.1 at 2013-05-28 04:46:32 +0100
+Processing by SessionsController#logout as HTML
+  Parameters: {"id"=>"nav-sign-out"}
+Redirected to https://localhost:4567/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:46:32 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  Rendered shared/_login_form.html.haml (0.6ms)
+  Rendered main_page/index.html.haml within layouts/application (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 04:46:33 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cl4RxUoXTZUTmH3zvDcOm7RVdPMeNirgie7wPs7pJrw=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'lmj112' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'lmj112@ic.ac.uk' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "users" SET "session_pass" = 'c2Fu0trOlOrYEpsYfq8brg==
+', "updated_at" = '2013-05-28 03:46:34.542603' WHERE "users"."id" = 1[0m
+  [1m[35m (1.6ms)[0m  COMMIT
+Redirected to https://localhost:4567/
+Completed 302 Found in 668ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:46:34 +0100
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered main_page/index.html.haml within layouts/application (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 04:46:34 +0100
+Processing by SkinsController#index as */*
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered grades/_index.html.haml (0.0ms)
+  Rendered exercises/_index.html.haml (0.2ms)
+  Rendered shared/_grades_schema.html.haml (0.0ms)
+  Rendered shared/_givens_modal.html.haml (0.2ms)
+  Rendered dashboard/_index.html.haml (1.9ms)
+  Rendered skins/index.html.haml within layouts/application (4.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:46:34 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 640ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 04:46:35 +0100
+Processing by CateRequestsController#profile_pic as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 175ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:46:35 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 675ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout?id=nav-sign-out" for 127.0.0.1 at 2013-05-28 04:46:37 +0100
+Processing by SessionsController#logout as HTML
+  Parameters: {"id"=>"nav-sign-out"}
+Redirected to https://localhost:4567/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:46:37 +0100
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (0.6ms)
+  Rendered main_page/index.html.haml within layouts/application (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:46:55 +0100
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (1.5ms)
+  Rendered main_page/index.html.haml within layouts/application (4.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 04:46:55 +0100
+Served asset /classy-cate.js - 304 Not Modified (3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 04:47:00 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EdedlXgg+va2J+fB3JhUDI6UNQ34PfL+yumj9ZxoCFM=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."login" = 'lmj112' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'lmj112@ic.ac.uk' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "session_pass" = 'U8wwjNb5apVQLM3h0rgCGA==
+', "updated_at" = '2013-05-28 03:47:01.526481' WHERE "users"."id" = 1
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+Redirected to https://localhost:4567/
+Completed 302 Found in 699ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:47:01 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered main_page/index.html.haml within layouts/application (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 04:47:01 +0100
+Served asset /classy-cate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/settings.js?body=1" for 127.0.0.1 at 2013-05-28 04:47:01 +0100
+Served asset /settings.js - 200 OK (1ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 04:47:01 +0100
+Processing by SkinsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered grades/_index.html.haml (0.0ms)
+  Rendered exercises/_index.html.haml (0.2ms)
+  Rendered shared/_grades_schema.html.haml (0.0ms)
+  Rendered shared/_givens_modal.html.haml (0.1ms)
+  Rendered dashboard/_index.html.haml (1.3ms)
+  Rendered skins/index.html.haml within layouts/application (3.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:47:01 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 630ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 04:47:02 +0100
+Processing by CateRequestsController#profile_pic as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 185ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:47:02 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 425ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:47:04 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 718ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:47:18 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  Rendered shared/_login_form.html.haml (1.7ms)
+  Rendered main_page/index.html.haml within layouts/application (5.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 04:47:18 +0100
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/login_form.css?body=1" for 127.0.0.1 at 2013-05-28 04:47:18 +0100
+Served asset /login_form.css - 200 OK (3ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-05-28 04:47:18 +0100
+Served asset /timeline.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 04:47:18 +0100
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-05-28 04:47:18 +0100
+Served asset /dashboard.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 04:47:18 +0100
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-28 04:47:18 +0100
+Served asset /shared.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-28 04:47:18 +0100
+Served asset /bootstrap.min.js - 200 OK (3ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-05-28 04:47:18 +0100
+Served asset /timeline.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 04:47:18 +0100
+Served asset /application.js - 200 OK (10ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 04:47:19 +0100
+Served asset /classy-cate.js - 200 OK (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 04:47:21 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9h5VmLAzNFpLhJ244em2uhdVqaLaESSZHdNMkjzK6M=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'lmj112' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'lmj112@ic.ac.uk' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mUPDATE "users" SET "session_pass" = 'ccaP9ZWK0oL+p7pJ1QidoQ==
+', "updated_at" = '2013-05-28 03:47:21.978255' WHERE "users"."id" = 1[0m
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to https://localhost:4567/
+Completed 302 Found in 952ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:47:21 +0100
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered main_page/index.html.haml within layouts/application (2.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (2.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.1ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/settings.js?body=1" for 127.0.0.1 at 2013-05-28 04:47:22 +0100
+Served asset /settings.js - 200 OK (0ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 04:47:22 +0100
+Processing by SkinsController#index as */*
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered grades/_index.html.haml (0.1ms)
+  Rendered exercises/_index.html.haml (0.6ms)
+  Rendered shared/_grades_schema.html.haml (0.1ms)
+  Rendered shared/_givens_modal.html.haml (0.3ms)
+  Rendered dashboard/_index.html.haml (3.7ms)
+  Rendered skins/index.html.haml within layouts/application (8.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (0.1ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:47:22 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 700ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 04:47:23 +0100
+Processing by CateRequestsController#profile_pic as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered text template (0.0ms)
+Sent data  (1.1ms)
+Completed 200 OK in 244ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:47:23 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 753ms (Views: 5.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:47:26 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 500 Internal Server Error in 7ms
+
+OpenSSL::Cipher::CipherError (bad decrypt):
+  app/controllers/cate_requests_controller.rb:43:in `get_pass'
+  app/controllers/cate_requests_controller.rb:10:in `portal'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.7ms)
+Connecting to database specified by database.yml
+  [1m[36m (119.2ms)[0m  [1mDROP DATABASE IF EXISTS "classycate_development"[0m
+  [1m[35m (112.0ms)[0m  DROP DATABASE IF EXISTS "classycate_test"
+  [1m[36m (235.0ms)[0m  [1mCREATE DATABASE "classycate_development" ENCODING = 'unicode'[0m
+  [1m[35m (230.0ms)[0m  CREATE DATABASE "classycate_test" ENCODING = 'unicode'
+  [1m[36m (5.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255), "email" character varying(255), "password_hash" character varying(255), "password_salt" character varying(255), "session_pass" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130528011513')[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:56:52 +0100
+Connecting to database specified by database.yml
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (2.5ms)
+  Rendered main_page/index.html.haml within layouts/application (50.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 95ms (Views: 88.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 04:56:52 +0100
+Served asset /classy-cate.js - 304 Not Modified (1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 04:56:58 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EdedlXgg+va2J+fB3JhUDI6UNQ34PfL+yumj9ZxoCFM=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'lmj112@ic.ac.uk' LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 03:56:59 UTC +00:00], ["email", "lmj112@ic.ac.uk"], ["login", "lmj112"], ["password_hash", "$2a$10$SEaS9UjQL11SPDul6DCHkuAsPkts02WgALSVRoVeWlcEAhncJfh5G"], ["password_salt", "$2a$10$SEaS9UjQL11SPDul6DCHku"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 03:56:59 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE "users" SET "session_pass" = 'bkgY33ATJadWmp3ln0XH7w==
+', "password_salt" = '$2a$10$Dww08WZjC8Lg7tZ4HcYtn.', "password_hash" = '$2a$10$Dww08WZjC8Lg7tZ4HcYtn.KKxLybRSPLpQZ0A.zbjfoJ3aciVKv.i', "updated_at" = '2013-05-28 03:56:59.147554' WHERE "users"."id" = 1
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to https://localhost:4567/
+Completed 302 Found in 832ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:56:59 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered main_page/index.html.haml within layouts/application (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (4.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (2.4ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 04:56:59 +0100
+Served asset /classy-cate.js - 304 Not Modified (0ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 04:56:59 +0100
+Processing by SkinsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered grades/_index.html.haml (6.8ms)
+  Rendered exercises/_index.html.haml (5.5ms)
+  Rendered shared/_grades_schema.html.haml (6.7ms)
+  Rendered shared/_givens_modal.html.haml (1.8ms)
+  Rendered dashboard/_index.html.haml (27.8ms)
+  Rendered skins/index.html.haml within layouts/application (43.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:56:59 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 608ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:57:00 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 760ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 04:57:00 +0100
+Processing by CateRequestsController#profile_pic as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Sent data  (2.8ms)
+Completed 200 OK in 153ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered main_page/index.html.haml within layouts/application (1.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Served asset /timeline.css - 200 OK (1ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Served asset /dashboard.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Served asset /bootstrap.min.js - 200 OK (1ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Served asset /timeline.js - 200 OK (1ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Served asset /shared.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Served asset /classy-cate.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/login_form.css?body=1" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Served asset /login_form.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/settings.js?body=1" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Served asset /settings.js - 200 OK (1ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Processing by SkinsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered grades/_index.html.haml (0.0ms)
+  Rendered exercises/_index.html.haml (0.2ms)
+  Rendered shared/_grades_schema.html.haml (0.0ms)
+  Rendered shared/_givens_modal.html.haml (0.1ms)
+  Rendered dashboard/_index.html.haml (1.4ms)
+  Rendered skins/index.html.haml within layouts/application (3.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 04:57:04 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Redirected to https://localhost:4567/
+Completed 500 Internal Server Error in 135ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/cate_requests_controller.rb:14:in `portal'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.6ms)
+Connecting to database specified by database.yml
+  [1m[36m (111.4ms)[0m  [1mDROP DATABASE IF EXISTS "classycate_development"[0m
+  [1m[35m (111.9ms)[0m  DROP DATABASE IF EXISTS "classycate_test"
+  [1m[36m (232.0ms)[0m  [1mCREATE DATABASE "classycate_development" ENCODING = 'unicode'[0m
+  [1m[35m (233.2ms)[0m  CREATE DATABASE "classycate_test" ENCODING = 'unicode'
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255), "email" character varying(255), "password_hash" character varying(255), "password_salt" character varying(255), "session_pass" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130528011513')[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:06:16 +0100
+Connecting to database specified by database.yml
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (2.5ms)
+  Rendered main_page/index.html.haml within layouts/application (55.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 101ms (Views: 94.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:06:16 +0100
+Served asset /classy-cate.js - 304 Not Modified (1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 05:06:22 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EdedlXgg+va2J+fB3JhUDI6UNQ34PfL+yumj9ZxoCFM=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'lmj112@ic.ac.uk' LIMIT 1
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 04:06:23 UTC +00:00], ["email", "lmj112@ic.ac.uk"], ["login", "lmj112"], ["password_hash", "$2a$10$ThP5/JJAOH10oqdBbJjTvu96PVsQ6AWCuHsLXMxB33/x1owQDqIJi"], ["password_salt", "$2a$10$ThP5/JJAOH10oqdBbJjTvu"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 04:06:23 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE "users" SET "session_pass" = 'k3KBEbG+OLPrWwnuxdpoDQ==
+', "password_salt" = '$2a$10$/RfK4raPs8PmW6rnjd.QlO', "password_hash" = '$2a$10$/RfK4raPs8PmW6rnjd.QlOS4F2heg/Mu2l/cytDNB7C2u80SbHCma', "updated_at" = '2013-05-28 04:06:23.768115' WHERE "users"."id" = 1
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to https://localhost:4567/
+Completed 302 Found in 1416ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:06:23 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered main_page/index.html.haml within layouts/application (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (4.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (2.1ms)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:06:23 +0100
+Served asset /classy-cate.js - 304 Not Modified (0ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 05:06:23 +0100
+Processing by SkinsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered grades/_index.html.haml (6.0ms)
+  Rendered exercises/_index.html.haml (5.7ms)
+  Rendered shared/_grades_schema.html.haml (5.6ms)
+  Rendered shared/_givens_modal.html.haml (1.8ms)
+  Rendered dashboard/_index.html.haml (24.3ms)
+  Rendered skins/index.html.haml within layouts/application (39.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:06:23 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 625ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 05:06:24 +0100
+Processing by CateRequestsController#profile_pic as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Sent data  (2.1ms)
+Completed 200 OK in 171ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:06:24 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 646ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:06:28 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 382ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered main_page/index.html.haml within layouts/application (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (0.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Served asset /bootstrap.min.js - 200 OK (1ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Served asset /timeline.js - 200 OK (0ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Served asset /classy-cate.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Served asset /shared.css - 200 OK (1ms)
+
+
+Started GET "/assets/login_form.css?body=1" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Served asset /login_form.css - 200 OK (1ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Served asset /timeline.css - 200 OK (1ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Served asset /dashboard.css - 200 OK (1ms)
+
+
+Started GET "/assets/settings.js?body=1" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Served asset /settings.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Processing by SkinsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered grades/_index.html.haml (0.1ms)
+  Rendered exercises/_index.html.haml (0.2ms)
+  Rendered shared/_grades_schema.html.haml (0.0ms)
+  Rendered shared/_givens_modal.html.haml (0.1ms)
+  Rendered dashboard/_index.html.haml (1.4ms)
+  Rendered skins/index.html.haml within layouts/application (3.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Redirected to https://localhost:4567/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:06:33 +0100
+Processing by MainPageController#index as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered main_page/index.html.haml within layouts/application (1.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:15:57 +0100
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered main_page/index.html.haml within layouts/application (12.0ms)
+Compiled classy-cate.js  (414ms)  (pid 44230)
+Compiled application.js  (6ms)  (pid 44230)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (1.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 460ms (Views: 458.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Served asset /bootstrap.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Served asset /timeline.js - 200 OK (0ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Served asset /classy-cate.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Served asset /shared.css - 200 OK (0ms)
+
+
+Started GET "/assets/login_form.css?body=1" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Served asset /login_form.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Served asset /dashboard.css - 200 OK (0ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Served asset /timeline.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/settings.js?body=1" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Served asset /settings.js - 200 OK (0ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Processing by SkinsController#index as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered grades/_index.html.haml (0.0ms)
+  Rendered exercises/_index.html.haml (0.3ms)
+  Rendered shared/_grades_schema.html.haml (0.0ms)
+  Rendered shared/_givens_modal.html.haml (0.1ms)
+  Rendered dashboard/_index.html.haml (21.2ms)
+  Rendered skins/index.html.haml within layouts/application (23.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:15:58 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+  [1m[36m (113.3ms)[0m  [1mDROP DATABASE IF EXISTS "classycate_development"[0m
+  [1m[35m (107.5ms)[0m  DROP DATABASE IF EXISTS "classycate_test"
+  [1m[36m (234.2ms)[0m  [1mCREATE DATABASE "classycate_development" ENCODING = 'unicode'[0m
+  [1m[35m (229.7ms)[0m  CREATE DATABASE "classycate_test" ENCODING = 'unicode'
+  [1m[36m (5.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255), "email" character varying(255), "password_hash" character varying(255), "password_salt" character varying(255), "session_pass" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130528011513')[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:16:16 +0100
+Connecting to database specified by database.yml
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (2.3ms)
+  Rendered main_page/index.html.haml within layouts/application (51.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 95ms (Views: 89.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:16:16 +0100
+Served asset /classy-cate.js - 200 OK (1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 05:16:21 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EdedlXgg+va2J+fB3JhUDI6UNQ34PfL+yumj9ZxoCFM=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'lmj112@ic.ac.uk' LIMIT 1
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 04:16:21 UTC +00:00], ["email", "lmj112@ic.ac.uk"], ["login", "lmj112"], ["password_hash", "$2a$10$z6cNSYusH7lpfC1TKcv4nO1y5MILsS7rx5AVBcSV153Xg6/BKU94m"], ["password_salt", "$2a$10$z6cNSYusH7lpfC1TKcv4nO"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 04:16:21 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  UPDATE "users" SET "session_pass" = 'gr0BYoKFSoAygtVNoX2ifQ==
+', "password_salt" = '$2a$10$hzUV/y4eLrGgyWcMM9EWPe', "password_hash" = '$2a$10$hzUV/y4eLrGgyWcMM9EWPeis2oYEiQ4A6PGIItUCfI/t9ERMhGJNu', "updated_at" = '2013-05-28 04:16:21.969310' WHERE "users"."id" = 1
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to https://localhost:4567/
+Completed 302 Found in 849ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:16:21 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered main_page/index.html.haml within layouts/application (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (4.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (2.1ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:16:22 +0100
+Served asset /classy-cate.js - 304 Not Modified (0ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 05:16:22 +0100
+Processing by SkinsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered grades/_index.html.haml (6.1ms)
+  Rendered exercises/_index.html.haml (5.3ms)
+  Rendered shared/_grades_schema.html.haml (5.0ms)
+  Rendered shared/_givens_modal.html.haml (1.8ms)
+  Rendered dashboard/_index.html.haml (23.0ms)
+  Rendered skins/index.html.haml within layouts/application (37.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:16:22 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 642ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:16:22 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 767ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 05:16:23 +0100
+Processing by CateRequestsController#profile_pic as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Sent data  (2.9ms)
+Completed 200 OK in 153ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:16:27 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 363ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:16:29 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 617ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:16:30 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 707ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 05:16:31 +0100
+Processing by CateRequestsController#profile_pic as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 162ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:16:37 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  Rendered shared/_login_form.html.haml (0.8ms)
+  Rendered main_page/index.html.haml within layouts/application (2.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-05-28 05:16:37 +0100
+Served asset /dashboard.css - 200 OK (1ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-05-28 05:16:37 +0100
+Served asset /timeline.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 05:16:37 +0100
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 05:16:37 +0100
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-28 05:16:37 +0100
+Served asset /bootstrap.min.js - 200 OK (1ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:16:37 +0100
+Served asset /classy-cate.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 05:16:37 +0100
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-28 05:16:37 +0100
+Served asset /shared.css - 200 OK (1ms)
+
+
+Started GET "/assets/login_form.css?body=1" for 127.0.0.1 at 2013-05-28 05:16:37 +0100
+Served asset /login_form.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 05:16:37 +0100
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-05-28 05:16:37 +0100
+Served asset /timeline.css - 200 OK (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:17:12 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  Rendered shared/_login_form.html.haml (0.7ms)
+  Rendered main_page/index.html.haml within layouts/application (2.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 05:17:12 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/login_form.css?body=1" for 127.0.0.1 at 2013-05-28 05:17:12 +0100
+Served asset /login_form.css - 200 OK (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-28 05:17:12 +0100
+Served asset /shared.css - 200 OK (0ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-05-28 05:17:12 +0100
+Served asset /timeline.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-05-28 05:17:12 +0100
+Served asset /dashboard.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 05:17:12 +0100
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 05:17:12 +0100
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-28 05:17:12 +0100
+Served asset /bootstrap.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-05-28 05:17:12 +0100
+Served asset /timeline.js - 200 OK (0ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:17:12 +0100
+Served asset /classy-cate.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 05:17:12 +0100
+Served asset /application.js - 200 OK (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 05:17:17 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GWzxE1FnveIclPMxLTT0EFVVemJxmtWGTLrwooDh47g=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'lmj112' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'lmj112@ic.ac.uk' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "users" SET "session_pass" = 'meyeH9rPnH4bjPG7bltPjw==
+', "updated_at" = '2013-05-28 04:17:18.379549' WHERE "users"."id" = 1[0m
+  [1m[35m (1.3ms)[0m  COMMIT
+Redirected to https://localhost:4567/
+Completed 302 Found in 724ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:17:18 +0100
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered main_page/index.html.haml within layouts/application (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/settings.js?body=1" for 127.0.0.1 at 2013-05-28 05:17:18 +0100
+Served asset /settings.js - 200 OK (1ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 05:17:18 +0100
+Processing by SkinsController#index as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered grades/_index.html.haml (0.0ms)
+  Rendered exercises/_index.html.haml (0.2ms)
+  Rendered shared/_grades_schema.html.haml (0.0ms)
+  Rendered shared/_givens_modal.html.haml (0.1ms)
+  Rendered dashboard/_index.html.haml (1.4ms)
+  Rendered skins/index.html.haml within layouts/application (3.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:17:18 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 1070ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 05:17:19 +0100
+Processing by CateRequestsController#profile_pic as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 157ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:17:19 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 992ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:17:23 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 403ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:17:27 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:17:43 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"student.cgi?key=2012:c1:lmj112"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Redirected to https://localhost:4567/
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:17:43 +0100
+Processing by MainPageController#index as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  Rendered shared/_login_form.html.haml (0.7ms)
+  Rendered main_page/index.html.haml within layouts/application (3.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:17:44 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Redirected to https://localhost:4567/
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:17:44 +0100
+Processing by MainPageController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (0.6ms)
+  Rendered main_page/index.html.haml within layouts/application (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:17:45 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Redirected to https://localhost:4567/
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:17:45 +0100
+Processing by MainPageController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  Rendered shared/_login_form.html.haml (0.6ms)
+  Rendered main_page/index.html.haml within layouts/application (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:17:46 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"student.cgi?key=2012:c1:lmj112"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Redirected to https://localhost:4567/
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:17:46 +0100
+Processing by MainPageController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (0.6ms)
+  Rendered main_page/index.html.haml within layouts/application (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:17:46 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Redirected to https://localhost:4567/
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:17:46 +0100
+Processing by MainPageController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  Rendered shared/_login_form.html.haml (0.6ms)
+  Rendered main_page/index.html.haml within layouts/application (1.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:17:47 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Redirected to https://localhost:4567/
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:17:47 +0100
+Processing by MainPageController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (0.6ms)
+  Rendered main_page/index.html.haml within layouts/application (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:17:48 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Redirected to https://localhost:4567/
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:17:48 +0100
+Processing by MainPageController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  Rendered shared/_login_form.html.haml (0.7ms)
+  Rendered main_page/index.html.haml within layouts/application (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:17:48 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"student.cgi?key=2012:c1:lmj112"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Redirected to https://localhost:4567/
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:17:48 +0100
+Processing by MainPageController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (0.6ms)
+  Rendered main_page/index.html.haml within layouts/application (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+Connecting to database specified by database.yml
+  [1m[36m (112.0ms)[0m  [1mDROP DATABASE IF EXISTS "classycate_development"[0m
+  [1m[35m (112.4ms)[0m  DROP DATABASE IF EXISTS "classycate_test"
+  [1m[36m (233.8ms)[0m  [1mCREATE DATABASE "classycate_development" ENCODING = 'unicode'[0m
+  [1m[35m (228.5ms)[0m  CREATE DATABASE "classycate_test" ENCODING = 'unicode'
+  [1m[36m (16.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255), "email" character varying(255), "password_hash" character varying(255), "password_salt" character varying(255), "session_pass" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130528011513')[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:18:19 +0100
+Connecting to database specified by database.yml
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (2.4ms)
+  Rendered main_page/index.html.haml within layouts/application (52.8ms)
+Compiled classy-cate.js  (412ms)  (pid 44672)
+Compiled application.js  (4ms)  (pid 44672)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Completed 200 OK in 524ms (Views: 517.7ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 05:18:20 +0100
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-28 05:18:20 +0100
+Served asset /shared.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:20 +0100
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-05-28 05:18:20 +0100
+Served asset /timeline.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:20 +0100
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:20 +0100
+Served asset /bootstrap.min.js - 200 OK (1ms)
+
+
+Started GET "/assets/login_form.css?body=1" for 127.0.0.1 at 2013-05-28 05:18:20 +0100
+Served asset /login_form.css - 200 OK (2ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:20 +0100
+Served asset /timeline.js - 200 OK (1ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:20 +0100
+Served asset /classy-cate.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:20 +0100
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-05-28 05:18:20 +0100
+Served asset /dashboard.css - 200 OK (1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 05:18:27 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d7fkPmNK/G2DpHm6b7F00MFrujRIrULDa97JNTSJqaI=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'lmj112@ic.ac.uk' LIMIT 1
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 04:18:27 UTC +00:00], ["email", "lmj112@ic.ac.uk"], ["login", "lmj112"], ["password_hash", "$2a$10$1vBuZGtllUDoq8dpIFtVderEXJQ//DlWwA4yokeYbJ4LZx9nnXkJ."], ["password_salt", "$2a$10$1vBuZGtllUDoq8dpIFtVde"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 04:18:27 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE "users" SET "session_pass" = '19hWwRsgxAwNUXUuoHQTmQ==
+', "password_salt" = '$2a$10$PlTO1yHq5axdHirRfiy1hu', "password_hash" = '$2a$10$PlTO1yHq5axdHirRfiy1huXx5I20t6OH/g3.4LZGTmmD/cJ2z1Gdy', "updated_at" = '2013-05-28 04:18:28.019707' WHERE "users"."id" = 1
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to https://localhost:4567/
+Completed 302 Found in 883ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:18:28 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered main_page/index.html.haml within layouts/application (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (5.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (2.2ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:28 +0100
+Served asset /classy-cate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/settings.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:28 +0100
+Served asset /settings.js - 200 OK (1ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 05:18:28 +0100
+Processing by SkinsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered grades/_index.html.haml (5.8ms)
+  Rendered exercises/_index.html.haml (5.7ms)
+  Rendered shared/_grades_schema.html.haml (5.3ms)
+  Rendered shared/_givens_modal.html.haml (1.9ms)
+  Rendered dashboard/_index.html.haml (23.6ms)
+  Rendered skins/index.html.haml within layouts/application (38.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:18:28 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 607ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:18:28 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 638ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 05:18:29 +0100
+Processing by CateRequestsController#profile_pic as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Sent data  (2.3ms)
+Completed 200 OK in 151ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:18:30 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 755ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:18:35 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"student.cgi?key=2012:c1:lmj112"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 779ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:18:37 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 616ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 05:18:38 +0100
+Processing by CateRequestsController#profile_pic as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 148ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:18:38 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 369ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:18:45 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  Rendered shared/_login_form.html.haml (0.8ms)
+  Rendered main_page/index.html.haml within layouts/application (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 05:18:46 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-28 05:18:46 +0100
+Served asset /shared.css - 200 OK (0ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-05-28 05:18:46 +0100
+Served asset /timeline.css - 200 OK (0ms)
+
+
+Started GET "/assets/login_form.css?body=1" for 127.0.0.1 at 2013-05-28 05:18:46 +0100
+Served asset /login_form.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-05-28 05:18:46 +0100
+Served asset /dashboard.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:46 +0100
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:46 +0100
+Served asset /timeline.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:46 +0100
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:46 +0100
+Served asset /bootstrap.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:46 +0100
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:46 +0100
+Served asset /classy-cate.js - 200 OK (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 05:18:49 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2J/sWkVfhY8VIPlBoGkkU5k2MQy9PvIzTG/PlsJmcA0=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'lmj112' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'lmj112@ic.ac.uk' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "users" SET "session_pass" = '9HbwtegR+8/J6XwPe/u5Ag==
+', "updated_at" = '2013-05-28 04:18:49.813974' WHERE "users"."id" = 1[0m
+  [1m[35m (1.7ms)[0m  COMMIT
+Redirected to https://localhost:4567/
+Completed 302 Found in 680ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:18:49 +0100
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered main_page/index.html.haml within layouts/application (1.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/settings.js?body=1" for 127.0.0.1 at 2013-05-28 05:18:49 +0100
+Served asset /settings.js - 200 OK (0ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 05:18:49 +0100
+Processing by SkinsController#index as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered grades/_index.html.haml (0.0ms)
+  Rendered exercises/_index.html.haml (0.3ms)
+  Rendered shared/_grades_schema.html.haml (0.0ms)
+  Rendered shared/_givens_modal.html.haml (0.1ms)
+  Rendered dashboard/_index.html.haml (1.4ms)
+  Rendered skins/index.html.haml within layouts/application (3.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:18:49 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 634ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 05:18:50 +0100
+Processing by CateRequestsController#profile_pic as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 160ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:18:50 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 373ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:18:53 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"student.cgi?key=2012:c1:lmj112"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 1362ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:18:57 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+  [1m[36m (112.2ms)[0m  [1mDROP DATABASE IF EXISTS "classycate_development"[0m
+  [1m[35m (112.7ms)[0m  DROP DATABASE IF EXISTS "classycate_test"
+  [1m[36m (232.4ms)[0m  [1mCREATE DATABASE "classycate_development" ENCODING = 'unicode'[0m
+  [1m[35m (230.9ms)[0m  CREATE DATABASE "classycate_test" ENCODING = 'unicode'
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255), "email" character varying(255), "password_hash" character varying(255), "password_salt" character varying(255), "session_pass" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130528011513')[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:19:58 +0100
+Connecting to database specified by database.yml
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (2.4ms)
+  Rendered main_page/index.html.haml within layouts/application (53.4ms)
+Compiled classy-cate.js  (415ms)  (pid 44755)
+Compiled application.js  (3ms)  (pid 44755)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Completed 200 OK in 526ms (Views: 520.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 05:19:59 +0100
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-05-28 05:19:59 +0100
+Served asset /timeline.css - 200 OK (1ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-28 05:19:59 +0100
+Served asset /shared.css - 200 OK (1ms)
+
+
+Started GET "/assets/login_form.css?body=1" for 127.0.0.1 at 2013-05-28 05:19:59 +0100
+Served asset /login_form.css - 200 OK (1ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-05-28 05:19:59 +0100
+Served asset /dashboard.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 05:19:59 +0100
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-05-28 05:19:59 +0100
+Served asset /timeline.js - 200 OK (1ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:19:59 +0100
+Served asset /classy-cate.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 05:19:59 +0100
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-28 05:19:59 +0100
+Served asset /bootstrap.min.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 05:19:59 +0100
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 05:20:00 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cuoOYyStq9UgkY0KqLMkvXcWGUkZ3T1GJLkY5w2RVg4=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'lmj112@ic.ac.uk' LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 04:20:01 UTC +00:00], ["email", "lmj112@ic.ac.uk"], ["login", "lmj112"], ["password_hash", "$2a$10$hGT9di8sH90a1qGYGw4qauReNdzDQ6fU9j6tnQfq7t2SSFc2EK.N."], ["password_salt", "$2a$10$hGT9di8sH90a1qGYGw4qau"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 04:20:01 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  UPDATE "users" SET "session_pass" = 'nR60W6tuqQvXfTbuL2jGlg==
+', "password_salt" = '$2a$10$j40jrEUHkssy00q3J/7buu', "password_hash" = '$2a$10$j40jrEUHkssy00q3J/7buuadUT1pFA7pbpnTLC5FEyJ1VOthujeM.', "updated_at" = '2013-05-28 04:20:01.390817' WHERE "users"."id" = 1
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to https://localhost:4567/
+Completed 302 Found in 874ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:20:01 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered main_page/index.html.haml within layouts/application (1.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (6.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (2.2ms)
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/settings.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:01 +0100
+Served asset /settings.js - 200 OK (1ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 05:20:01 +0100
+Processing by SkinsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered grades/_index.html.haml (5.7ms)
+  Rendered exercises/_index.html.haml (8.0ms)
+  Rendered shared/_grades_schema.html.haml (5.9ms)
+  Rendered shared/_givens_modal.html.haml (2.8ms)
+  Rendered dashboard/_index.html.haml (27.0ms)
+  Rendered skins/index.html.haml within layouts/application (44.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:20:01 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 608ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 05:20:02 +0100
+Processing by CateRequestsController#profile_pic as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Sent data  (3.0ms)
+Completed 200 OK in 152ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:20:02 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 373ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:20:08 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  Rendered shared/_login_form.html.haml (0.8ms)
+  Rendered main_page/index.html.haml within layouts/application (2.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-05-28 05:20:08 +0100
+Served asset /dashboard.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:08 +0100
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 05:20:08 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:08 +0100
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:08 +0100
+Served asset /timeline.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:08 +0100
+Served asset /bootstrap.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-05-28 05:20:08 +0100
+Served asset /timeline.css - 200 OK (0ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:08 +0100
+Served asset /classy-cate.js - 200 OK (0ms)
+
+
+Started GET "/assets/login_form.css?body=1" for 127.0.0.1 at 2013-05-28 05:20:08 +0100
+Served asset /login_form.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:08 +0100
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-28 05:20:08 +0100
+Served asset /shared.css - 200 OK (0ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:20:10 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+Completed 200 OK in 382ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-05-28 05:20:16 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L2Q9n0QQsulGOMH4jIRrW3b4g84PUNGaBVXlVvD1O4Q=", "user"=>{"login"=>"lmj112", "password"=>"[FILTERED]"}, "commit"=>""}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'lmj112' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'lmj112@ic.ac.uk' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "users" SET "session_pass" = 'DBhyfruQnXTebZh6tVPb7g==
+', "updated_at" = '2013-05-28 04:20:17.028714' WHERE "users"."id" = 1[0m
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to https://localhost:4567/
+Completed 302 Found in 673ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:20:17 +0100
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered main_page/index.html.haml within layouts/application (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:17 +0100
+Served asset /classy-cate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/settings.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:17 +0100
+Served asset /settings.js - 200 OK (0ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 05:20:17 +0100
+Processing by SkinsController#index as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered grades/_index.html.haml (0.1ms)
+  Rendered exercises/_index.html.haml (0.2ms)
+  Rendered shared/_grades_schema.html.haml (0.0ms)
+  Rendered shared/_givens_modal.html.haml (0.1ms)
+  Rendered dashboard/_index.html.haml (1.3ms)
+  Rendered skins/index.html.haml within layouts/application (21.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  Rendered shared/_navbar.html.haml (0.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:20:17 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 653ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:20:17 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 863ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cate_requests/profile_pic" for 127.0.0.1 at 2013-05-28 05:20:18 +0100
+Processing by CateRequestsController#profile_pic as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 144ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:20:20 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=5&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 373ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:20:21 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"student.cgi?key=2012:c1:lmj112"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 393ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cate_requests/portal.json" for 127.0.0.1 at 2013-05-28 05:20:26 +0100
+Processing by CateRequestsController#portal as JSON
+  Parameters: {"path"=>"/timetable.cgi?period=4&class=c1&keyt=2012:none:none:lmj112"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'lmj112' LIMIT 1
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:20:26 +0100
+Processing by MainPageController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  Rendered shared/_login_form.html.haml (0.7ms)
+  Rendered main_page/index.html.haml within layouts/application (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:26 +0100
+Served asset /classy-cate.js - 304 Not Modified (0ms)
+
+
+Started GET "/skins/index" for 127.0.0.1 at 2013-05-28 05:20:32 +0100
+Processing by SkinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Redirected to https://localhost:4567/
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-28 05:20:33 +0100
+Processing by MainPageController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  Rendered shared/_login_form.html.haml (0.6ms)
+  Rendered main_page/index.html.haml within layouts/application (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:33 +0100
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:33 +0100
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:33 +0100
+Served asset /bootstrap.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:33 +0100
+Served asset /timeline.js - 200 OK (0ms)
+
+
+Started GET "/assets/classy-cate.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:33 +0100
+Served asset /classy-cate.js - 200 OK (0ms)
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2013-05-28 05:20:33 +0100
+Served asset /shared.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 05:20:33 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/login_form.css?body=1" for 127.0.0.1 at 2013-05-28 05:20:33 +0100
+Served asset /login_form.css - 200 OK (0ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-05-28 05:20:33 +0100
+Served asset /timeline.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 05:20:33 +0100
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-05-28 05:20:33 +0100
+Served asset /dashboard.css - 200 OK (0ms)

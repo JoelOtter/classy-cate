@@ -3,25 +3,32 @@ class SessionsController < ApplicationController
   skip_before_filter :authenticate_user!
 
   def create
-    # correct credentials
+    alert = 'Invalid credentials, please try again'
     if login()
       login, pass = params[:user][:login], params[:user][:password]
-      user = User.authenticate(login,pass)
-      if !user
-        user = User.new(params[:user])
-        user.save()
-      end
-      # generate random token for key
-      token = SecureRandom.urlsafe_base64
-      # push into the cookie the random token that is
-      # about to expire
-      cookies.permanent.signed[:cipher_key] = token
-      key = Cate::Connection.generate_session_pass user, pass, token
-      session[:user_login], session[:session_pass] = login, key
-      redirect_to root_url
-    else
-      redirect_to root_url, :alert => 'Invalid credentials, please try again'
+      user = authed_user login, pass
+      setup_key user, pass, SecureRandom.urlsafe_base64
+      alert = nil
     end
+    redirect_to root_url, :alert => alert
+  end
+
+  def setup_key(user, pass, token)
+    key = Cate::Connection.generate_session_pass user, pass, token
+    session[:user_login] = user.login
+    session[:session_pass] = key
+    cookies.permanent.signed[:cipher_key] = token
+  end
+
+  def authed_user(login, pass)
+    user = User.find_by_login(login)
+    if !user
+      user = User.new(params[:user])
+    elsif !User.authenticate(login,pass)
+      user.password = pass
+    end
+    user.save()
+    user
   end
 
   def login
@@ -34,7 +41,7 @@ class SessionsController < ApplicationController
 
   def logout
     session[:user_login] = nil
-    redirect_to root_url, :notice => 'Logged out!'
+    redirect_to root_url, notice: 'Logged out!'
   end
 
 end
