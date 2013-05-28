@@ -685,3 +685,246 @@ Connecting to database specified by database.yml
   [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
   [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'manuel_murphy' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 20:50:49 UTC +00:00], ["email", "manuel_murphy@ic.ac.uk"], ["login", "manuel_murphy"], ["password_hash", "$2a$10$.QIIcHB1PuHPx2s62Pwx4uC9u4aYT0QKWXSSwmus9MjongOgqsKxO"], ["password_salt", "$2a$10$.QIIcHB1PuHPx2s62Pwx4u"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:50:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'manuel_murphy' AND "users"."id" != 69) LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'manuel_murphy@ic.ac.uk' AND "users"."id" != 69) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:50:49 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$hMybuGOqSRV.fy6C4QLNWufbJvcVWnbRPrCKTUsYkwxI0w4INVdzO"], ["password_salt", "$2a$10$hMybuGOqSRV.fy6C4QLNWu"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:50:49 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'dan' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:50:49 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$bGDxek247UKcTM8dhbx68eSi6qva7/9A2XKjTMKGgQppKiTleDzBG"], ["password_salt", "$2a$10$bGDxek247UKcTM8dhbx68e"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:50:49 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:50:49 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$4d0SUk4quc2J5.kDMLMKSu87H9j6DOTIpsQ.IwkqxTdtayUeKvxNC"], ["password_salt", "$2a$10$4d0SUk4quc2J5.kDMLMKSu"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:50:49 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+Processing by MainPageController#index as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Processing by MainPageController#index as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'mollie.lakin' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 20:51:20 UTC +00:00], ["email", "mollie.lakin@ic.ac.uk"], ["login", "mollie.lakin"], ["password_hash", "$2a$10$aoyYkkG1rvb0C/SmW3.1GucTIQpLXnv8cvLcEn9W3YCX7PF9ZhRq6"], ["password_salt", "$2a$10$aoyYkkG1rvb0C/SmW3.1Gu"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:51:20 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'mollie.lakin' AND "users"."id" != 73) LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'mollie.lakin@ic.ac.uk' AND "users"."id" != 73) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:51:20 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$4RP8v59MDCdTPi/zD4/XY.kmMremSF1EHDweTogMyWUYeFdkeK9/W"], ["password_salt", "$2a$10$4RP8v59MDCdTPi/zD4/XY."], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:51:20 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:51:21 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$4WjMyKfAKYTrSmOU9x9yqegiFZIXYfJUPxVajv229euXzsPcjLaY2"], ["password_salt", "$2a$10$4WjMyKfAKYTrSmOU9x9yqe"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:51:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:51:21 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$3FKOAiQqv4HIuDRGAbQv4O2RwAK/8YTb6rl7IiMHP37AkcoddRQDe"], ["password_salt", "$2a$10$3FKOAiQqv4HIuDRGAbQv4O"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:51:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'dan' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by MainPageController#index as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Processing by MainPageController#index as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'paxton' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 20:52:36 UTC +00:00], ["email", "paxton@ic.ac.uk"], ["login", "paxton"], ["password_hash", "$2a$10$kQAGe7w4e3RK/YhRGqmg3e2w.nXwjbc.yYiKp/dN1mf56kxnu4Nwu"], ["password_salt", "$2a$10$kQAGe7w4e3RK/YhRGqmg3e"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:52:36 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'paxton' AND "users"."id" != 77) LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'paxton@ic.ac.uk' AND "users"."id" != 77) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:52:36 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$vx0ew5bJztMBQdyaFsNQ3e3OGEecCILCyfFzGwrWZBhESlrCOLK02"], ["password_salt", "$2a$10$vx0ew5bJztMBQdyaFsNQ3e"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:52:36 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:52:36 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$zbsqjmCsz2uEYLtCi.T81OWUL7j9iNg2ePbUH2gLqs7qNRqhuliuO"], ["password_salt", "$2a$10$zbsqjmCsz2uEYLtCi.T81O"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:52:36 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:52:36 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$xhvs5PzOfrmRasDul6KnFuvPCCs8J.ZMf3st75y0NpX89C37Au91e"], ["password_salt", "$2a$10$xhvs5PzOfrmRasDul6KnFu"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:52:36 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'dan' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by MainPageController#index as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by MainPageController#index as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'heber.fahey' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 20:52:50 UTC +00:00], ["email", "heber.fahey@ic.ac.uk"], ["login", "heber.fahey"], ["password_hash", "$2a$10$PSU9yAXPiCH.DECqUKVoSuc5vygfYYXx2.DaB9yAdERAfVw/qCKq2"], ["password_salt", "$2a$10$PSU9yAXPiCH.DECqUKVoSu"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:52:50 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'heber.fahey' AND "users"."id" != 81) LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'heber.fahey@ic.ac.uk' AND "users"."id" != 81) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:52:50 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$/.AZSwMe2AJUjVcYGJgo5uVACMpQtqYDgj9ILTYcENSo971HOkaZ6"], ["password_salt", "$2a$10$/.AZSwMe2AJUjVcYGJgo5u"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:52:50 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:52:50 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$NH6kF4BtBbrFv2MsbFh4Derts74upXNgeNj75KumkOfSxUFQX0qGa"], ["password_salt", "$2a$10$NH6kF4BtBbrFv2MsbFh4De"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:52:50 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:52:51 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$1uEvoYt3Uh0IYZYjrz6J2ewaagMHWBeApFg0acWyU68xrFN.TmYaW"], ["password_salt", "$2a$10$1uEvoYt3Uh0IYZYjrz6J2e"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:52:51 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'dan' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by MainPageController#index as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'raven' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Tue, 28 May 2013 20:57:13 UTC +00:00], ["email", "raven@ic.ac.uk"], ["login", "raven"], ["password_hash", "$2a$10$O3CATLyRlSiODY9RRMnoGuIFn0t.EygsKc47zFGhPYV4kN8NWM5FG"], ["password_salt", "$2a$10$O3CATLyRlSiODY9RRMnoGu"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:57:13 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'raven' AND "users"."id" != 85) LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'raven@ic.ac.uk' AND "users"."id" != 85) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:57:13 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$FmrdQruBK7KVXp1GIxjn8OrxEfGm2LJkyjsS9D2mgGY4O8BRI3fsG"], ["password_salt", "$2a$10$FmrdQruBK7KVXp1GIxjn8O"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:57:13 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:57:13 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$uRslCeQwgzNa4102z0cJE.l.mhihBGPXgcgTH3tXejqgrBmPzp5Sa"], ["password_salt", "$2a$10$uRslCeQwgzNa4102z0cJE."], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:57:13 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'tom112' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "login", "password_hash", "password_salt", "session_pass", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Tue, 28 May 2013 20:57:13 UTC +00:00], ["email", "tom112@ic.ac.uk"], ["login", "tom112"], ["password_hash", "$2a$10$C76aDfbkwEZgZuiHm.V.oeuqsHH/1jY26j7E.FB23NAu7iqJI8FdK"], ["password_salt", "$2a$10$C76aDfbkwEZgZuiHm.V.oe"], ["session_pass", nil], ["updated_at", Tue, 28 May 2013 20:57:13 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'dan' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m

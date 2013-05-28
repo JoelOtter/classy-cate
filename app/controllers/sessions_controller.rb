@@ -33,7 +33,6 @@ class SessionsController < ApplicationController
   end
 
   def login
-    params[:user][:email] = params[:user][:login] + '@ic.ac.uk'
     cate = Cate::Connection.new params[:user][:login]
     verified = cate.verify_login(params[:user][:password])
     cate.destroy()
