@@ -1,6 +1,6 @@
 = form_for("user", :url => '/login', :html => {:class => 'login-form'}) do |f|
   %p.field
-    = text_field_tag 'user[email]', nil, :placeholder => 'College Email', :autocomplete => :off
+    = text_field_tag 'user[login]', nil, :placeholder => 'Username', :autocomplete => :off
     %i.icon-user.icon-large
   %p.field
     = password_field_tag 'user[password]', nil, :placeholder => 'Password'
