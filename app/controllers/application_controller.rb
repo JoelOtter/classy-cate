@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :authenticate_user!
@@ -6,7 +7,7 @@ class ApplicationController < ActionController::Base
     user = User.find_by_login session[:user_login]
     if user.nil?
       puts 'AUTH FAILED'
-      redirect_to '/', :alert => 'Please enter your login'
+      redirect_to '/', alert: 'Please enter your login'
     end
   end
 
