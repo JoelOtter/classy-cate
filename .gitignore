@@ -6,3 +6,4 @@ copyTl.sh
 *.sh
 *.sym
 tmp/
+.cate_user

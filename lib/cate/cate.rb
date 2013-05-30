@@ -15,7 +15,6 @@ module Cate
     end
 
     def self.generate_session_pass(user, pass, digest)
-      puts 'MAKING CIPHER'
       # generate a key from the old session id
       key = Digest::SHA256.hexdigest(digest)
       # encrypt the password with the digest key

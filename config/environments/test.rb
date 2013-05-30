@@ -34,4 +34,5 @@ ClassyCate::Application.configure do
   config.force_ssl = true
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  config.login, config.password = '', ''
 end

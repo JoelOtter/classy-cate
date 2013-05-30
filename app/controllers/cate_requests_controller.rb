@@ -11,7 +11,11 @@ class CateRequestsController < ApplicationController
     # invalidate cate instance
     cate.destroy()
     # render the result
-    render json: { content: response.body, path: response['location'] }
+    render json: {
+      content: response.body,
+      path: response['location'],
+      code: response.code
+    }
   rescue
     bar_user()
   end
@@ -26,7 +30,6 @@ class CateRequestsController < ApplicationController
   end
 
   def download
-    puts 'DOWNLOAD FROM CATE - ' + params[:path]
     cate = Cate::Connection.new current_user.login
     response = cate.get_page(params[:path], get_pass())
     puts response['content_disposition']
@@ -37,10 +40,9 @@ class CateRequestsController < ApplicationController
   end
 
   def bar_user
-    puts 'USER CONFLICT - Multiple sessions on one login'
     session[:user_login] = nil
     flash[:alert] = 'You have been signed in on another computer'
-    render json: { status: 'UserDenied', redirect: '/' }
+    render json: { status: 'UserDenied', redirect: '/', code: '401' }
   end
 
   def get_pass

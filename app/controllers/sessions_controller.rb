@@ -15,9 +15,8 @@ class SessionsController < ApplicationController
   end
 
   def setup_key(user, pass, token)
-    key = Cate::Connection.generate_session_pass user, pass, token
+    Cate::Connection.generate_session_pass user, pass, token
     session[:user_login] = user.login
-    session[:session_pass] = key
     cookies.permanent.signed[:cipher_key] = token
   end
 
