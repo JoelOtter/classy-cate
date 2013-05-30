@@ -7,3 +7,4 @@ copyTl.sh
 *.sym
 tmp/
 .cate_user
+log/*
